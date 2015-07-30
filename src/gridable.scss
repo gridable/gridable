@@ -1,0 +1,336 @@
+// gridable.scss
+
+@import 'common/variables';
+@import 'common/mixins';
+
+// Base
+[grid-grid] {
+	box-sizing: border-box;
+	display: flex;
+
+	> [grid-cell] {
+		box-sizing: border-box;
+		max-width: 100%;
+		flex: 1 0 0%;
+	}
+}
+
+// Visibility
+[grid-grid] {
+	> [grid-cell~="hide"] {
+		display: none;
+	}
+
+	> [grid-cell~="show"] {
+		display: block;
+	}
+}
+
+// Wrapping
+[grid-grid], [grid-grid~="wrap:on"] {
+	flex-wrap: wrap;
+}
+
+[grid-grid~="wrap:off"] {
+	flex-wrap: nowrap;
+}
+
+// Order
+[grid-grid], [grid-grid~="order:normal"] {
+	flex-direction: row;
+}
+
+[grid-grid~="order:reverse"] {
+	flex-direction: row-reverse;
+}
+
+// Direction
+[grid-grid], [grid-grid~="direction:horizontal"] {
+	flex-direction: row;
+
+	&[grid-grid~="order:reverse"] {
+		flex-direction: row-reverse;
+	}
+}
+
+[grid-grid~="direction:vertical"] {
+	flex-direction: column;
+
+	&[grid-grid~="order:reverse"] {
+		flex-direction: column-reverse;
+	}
+}
+
+// Alignment
+[grid-grid], [grid-grid~="align:start"] {
+	align-items: flex-start;
+}
+
+[grid-grid~="align:center"] {
+	align-items: center;
+}
+
+[grid-grid~="align:end"] {
+	align-items: flex-end;
+}
+
+[grid-grid~="align:fit"] {
+	> [grid-cell] {
+		display: flex;
+	}
+}
+
+[grid-grid] {
+	> [grid-cell~="align:start"] {
+		align-self: flex-start;
+	}
+
+	> [grid-cell~="align:center"] {
+		align-self: center;
+	}
+
+	> [grid-grid~="align:end"] {
+		align-self: flex-end;
+	}
+}
+
+// Justification
+[grid-grid], [grid-grid~="justify:start"] {
+	justify-content: flex-start;
+}
+
+[grid-grid~="justify:center"] {
+	justify-content: center;
+}
+
+[grid-grid~="justify:end"] {
+	justify-content: flex-end;
+}
+
+[grid-grid~="justify:between"] {
+	justify-content: space-between;
+}
+
+[grid-grid~="justify:around"] {
+	justify-content: space-around;
+}
+
+// Gutter
+[grid-grid], [grid-grid~="gutter:normal"] {
+	margin: 0 (- $gridable-gutter);
+
+	> [grid-cell] {
+		padding: 0 $gridable-gutter;
+	}
+}
+
+[grid-grid~="gutter:narrow"] {
+	margin: 0 (- $gridable-gutter / $gridable-gutter-divider);
+
+	> [grid-cell] {
+		padding: 0 ($gridable-gutter / $gridable-gutter-divider);
+	}
+}
+
+[grid-grid~="gutter:wide"] {
+	margin: 0 (- $gridable-gutter * $gridable-gutter-multiplier);
+
+	> [grid-cell] {
+		padding: 0 ($gridable-gutter * $gridable-gutter-multiplier);
+	}
+}
+
+[grid-grid~="gutter:off"] {
+	margin: 0;
+
+	> [grid-cell] {
+		padding: 0;
+	}
+}
+
+// Widths
+@for $columns from 1 through $gridable-columns {
+	[grid-grid~="width:#{$columns}"] > [grid-cell],
+	[grid-grid] > [grid-cell~="width:#{$columns}"] {
+		flex-basis: percentage($columns / $gridable-columns);
+		max-width: percentage($columns / $gridable-columns);
+	}
+}
+
+// Positions
+[grid-grid] {
+	> [grid-cell~="position:start"] {
+		order: -1;
+	}
+
+	> [grid-cell~="position:end"] {
+		order: $gridable-columns + 1;
+	}
+
+	@for $columns from 1 through $gridable-columns {
+		> [grid-cell~="position:#{$columns}"] {
+			order: #{$columns};
+		}
+	}
+}
+
+// Offset
+[grid-grid] {
+	> [grid-cell~="offset:0"] {
+		margin-left: 0;
+	}
+
+	@for $columns from 1 through $gridable-columns {
+		> [grid-cell~="offset:#{$columns}"] {
+			margin-left: percentage($columns / $gridable-columns);
+		}
+	}
+}
+
+// Breakpoints
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($selector, $gridable-mediaquery) {
+
+		// Visibility
+		[grid-grid] {
+			> [grid-cell~="hide.#{$name}"] {
+				display: none;
+			}
+
+			> [grid-cell~="show.#{$name}"] {
+				display: block;
+			}
+		}
+
+		// Wrapping
+		[grid-grid~="wrap.#{$name}:on"] {
+			flex-wrap: wrap;
+		}
+		[grid-grid~="wrap.#{$name}:off"] {
+			flex-wrap: nowrap;
+		}
+
+		// Order
+		[grid-grid~="order.#{$name}:normal"] {
+			flex-direction: row;
+		}
+		[grid-grid~="order.#{$name}:reverse"] {
+			flex-direction: row-reverse;
+		}
+
+		// Direction
+		[grid-grid~="direction.#{$name}:horizontal"] {
+			flex-direction: row;
+
+			&[grid-grid~="order:reverse"],
+			&[grid-grid~="order.#{$name}:reverse"] {
+				flex-direction: row-reverse;
+			}
+		}
+		[grid-grid~="direction.#{$name}:vertical"] {
+			flex-direction: column;
+
+			&[grid-grid~="order:reverse"],
+			&[grid-grid~="order.#{$name}:reverse"] {
+				flex-direction: column-reverse;
+			}
+		}
+
+		// Alignment
+		[grid-grid~="align.#{$name}:start"] {
+			align-items: flex-start;
+		}
+		[grid-grid~="align.#{$name}:center"] {
+			align-items: center;
+		}
+		[grid-grid~="align.#{$name}:end"] {
+			align-items: flex-end;
+		}
+
+		// Justification
+		[grid-grid~="justify.#{$name}:start"] {
+			justify-content: flex-start;
+		}
+		[grid-grid~="justify.#{$name}:center"] {
+			justify-content: center;
+		}
+		[grid-grid~="justify.#{$name}:end"] {
+			justify-content: flex-end;
+		}
+		[grid-grid~="justify.#{$name}:between"] {
+			justify-content: space-between;
+		}
+		[grid-grid~="justify.#{$name}:around"] {
+			justify-content: space-around;
+		}
+
+		// Gutter
+		[grid-grid~="gutter.#{$name}:normal"] {
+			margin: 0 (- $gridable-gutter);
+
+			> [grid-cell] {
+				padding: 0 $gridable-gutter;
+			}
+		}
+		[grid-grid~="gutter.#{$name}:narrow"] {
+			margin: 0 (- $gridable-gutter / $gridable-gutter-divider);
+
+			> [grid-cell] {
+				padding: 0 ($gridable-gutter / $gridable-gutter-divider);
+			}
+		}
+		[grid-grid~="gutter.#{$name}:wide"] {
+			margin: 0 (- $gridable-gutter * $gridable-gutter-multiplier);
+
+			> [grid-cell] {
+				padding: 0 ($gridable-gutter * $gridable-gutter-multiplier);
+			}
+		}
+		[grid-grid~="gutter.#{$name}:off"] {
+			margin: 0;
+
+			> [grid-cell] {
+				padding: 0;
+			}
+		}
+
+		// Widths
+		@for $columns from 1 through $gridable-columns {
+			[grid-grid~="width.#{$name}:#{$columns}"] > [grid-cell],
+			[grid-grid] > [grid-cell~="width.#{$name}:#{$columns}"] {
+				flex-basis: percentage($columns / $gridable-columns);
+				max-width: percentage($columns / $gridable-columns);
+			}
+		}
+
+		// Positions
+		[grid-grid] {
+			> [grid-cell~="position.#{$name}:start"] {
+				order: -1;
+			}
+
+			> [grid-cell~="position.#{$name}:end"] {
+				order: $gridable-columns + 1;
+			}
+
+			@for $columns from 1 through $gridable-columns {
+				> [grid-cell~="position.#{$name}:#{$columns}"] {
+					order: #{$columns};
+				}
+			}
+		}
+
+		// Offset
+		[grid-grid] {
+			> [grid-cell~="offset.#{$name}:0"] {
+				margin-left: 0;
+			}
+
+			@for $columns from 1 through $gridable-columns {
+				> [grid-cell~="offset.#{$name}:#{$columns}"] {
+					margin-left: percentage($columns / $gridable-columns);
+				}
+			}
+		}
+	}
+}
