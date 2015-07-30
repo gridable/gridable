@@ -1,0 +1,14 @@
+// _variables.scss
+
+$gridable-columns: 12 !default;
+$gridable-gutter: 10px !default;
+$gridable-gutter-multiplier: 2.5 !default;
+$gridable-gutter-divider: 2.5 !default;
+$gridable-mediaquery: true !default;
+$gridable-breakpoints: (
+	tiny: "(min-width: 400px)",
+	small: "(min-width: 800px)",
+	medium: "(min-width: 1200px)",
+	large: "(min-width: 1600px)",
+	huge: "(min-width: 2000px)"
+) !default;

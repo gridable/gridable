@@ -1,0 +1,37 @@
+{
+  "name": "gridable",
+  "description": "Responsive layout-grid using flexible-box.",
+  "license": "MIT",
+  "homepage": "http://gridable.github.io/",
+  "authors": [
+    {
+      "name": "Thomas Deinhamer",
+      "email": "thasmo@gmail.com"
+    }
+  ],
+  "keywords": [
+    "grid",
+    "flexbox",
+    "responsive",
+    "rwd",
+    "layout"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gridable/gridable.git"
+  },
+  "main": [
+    "source/gridable.scss",
+    "dist/gridable.css"
+  ],
+  "ignore": [
+    "node_modules/",
+    "task/",
+    "gulpfile.js",
+    "package.json",
+    "browserslist",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore"
+  ]
+}
