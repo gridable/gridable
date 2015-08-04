@@ -1,54 +1,54 @@
-[grid-grid] {
+[gridable-grid] {
   clear: both;
   overflow: hidden; }
-  [grid-grid] > [grid-cell] {
+  [gridable-grid] > [gridable-cell] {
     float: left;
     width: 100%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+1):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+1):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+1):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+1):first-child ~ [gridable-cell] {
   max-width: 100%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+2):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+2):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+2):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+2):first-child ~ [gridable-cell] {
   max-width: 50%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+3):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+3):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+3):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+3):first-child ~ [gridable-cell] {
   max-width: 33.33333%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+4):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+4):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+4):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+4):first-child ~ [gridable-cell] {
   max-width: 25%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+5):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+5):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+5):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+5):first-child ~ [gridable-cell] {
   max-width: 20%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+6):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+6):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+6):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+6):first-child ~ [gridable-cell] {
   max-width: 16.66667%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+7):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+7):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+7):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+7):first-child ~ [gridable-cell] {
   max-width: 14.28571%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+8):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+8):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+8):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+8):first-child ~ [gridable-cell] {
   max-width: 12.5%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+9):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+9):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+9):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+9):first-child ~ [gridable-cell] {
   max-width: 11.11111%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+10):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+10):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+10):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+10):first-child ~ [gridable-cell] {
   max-width: 10%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+11):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+11):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+11):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+11):first-child ~ [gridable-cell] {
   max-width: 9.09091%; }
 
-[grid-grid] > [grid-cell]:nth-last-child(n+12):first-child,
-[grid-grid] > [grid-cell]:nth-last-child(n+12):first-child ~ [grid-cell] {
+[gridable-grid] > [gridable-cell]:nth-last-child(n+12):first-child,
+[gridable-grid] > [gridable-cell]:nth-last-child(n+12):first-child ~ [gridable-cell] {
   max-width: 8.33333%; }

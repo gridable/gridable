@@ -3,11 +3,11 @@
 @import 'common/variables';
 
 // Base
-[grid-grid] {
+[#{$gridable-prefix}-grid] {
 	clear: both;
 	overflow: hidden;
 
-	> [grid-cell] {
+	> [#{$gridable-prefix}-cell] {
 		float: left;
 		width: 100%;
 	}
@@ -15,9 +15,9 @@
 
 // Auto-width Cells
 @for $columns from 1 through $gridable-columns {
-	[grid-grid] {
-		> [grid-cell]:nth-last-child(n+#{$columns}):first-child,
-		> [grid-cell]:nth-last-child(n+#{$columns}):first-child ~ [grid-cell] {
+	[#{$gridable-prefix}-grid] {
+		> [#{$gridable-prefix}-cell]:nth-last-child(n+#{$columns}):first-child,
+		> [#{$gridable-prefix}-cell]:nth-last-child(n+#{$columns}):first-child ~ [#{$gridable-prefix}-cell] {
 			max-width: percentage(1 / $columns);
 		}
 	}
