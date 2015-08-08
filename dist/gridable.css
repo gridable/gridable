@@ -84,7 +84,7 @@
       -ms-flex-item-align: center;
           align-self: center; }
 
-[gridable-grid] > [gridable-grid~="align:end"] {
+[gridable-grid] > [gridable-cell~="align:end"] {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end; }

@@ -89,7 +89,7 @@
 		align-self: center;
 	}
 
-	> [#{$gridable-prefix}-grid~="align:end"] {
+	> [#{$gridable-prefix}-cell~="align:end"] {
 		align-self: flex-end;
 	}
 }
