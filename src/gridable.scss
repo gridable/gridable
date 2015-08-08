@@ -74,10 +74,12 @@
 	align-items: flex-end;
 }
 
-[#{$gridable-prefix}-grid~="align:fit"] {
-	> [#{$gridable-prefix}-cell] {
-		display: flex;
-	}
+[#{$gridable-prefix}-grid~="align:baseline"] {
+	align-items: baseline;
+}
+
+[#{$gridable-prefix}-grid~="align:stretch"] {
+	align-items: stretch;
 }
 
 [#{$gridable-prefix}-grid] {
@@ -93,8 +95,12 @@
 		align-self: flex-end;
 	}
 
-	> [#{$gridable-prefix}-cell~="align:fit"] {
-		display: flex;
+	> [#{$gridable-prefix}-cell~="align:baseline"] {
+		align-self: baseline;
+	}
+
+	> [#{$gridable-prefix}-cell~="align:stretch"] {
+		align-self: stretch;
 	}
 }
 
@@ -253,6 +259,34 @@
 		}
 		[#{$gridable-prefix}-grid~="align.#{$name}:end"] {
 			align-items: flex-end;
+		}
+		[#{$gridable-prefix}-grid~="align.#{$name}:baseline"] {
+			align-items: baseline;
+		}
+		[#{$gridable-prefix}-grid~="align.#{$name}:stretch"] {
+			align-items: stretch;
+		}
+
+		[#{$gridable-prefix}-grid] {
+			> [#{$gridable-prefix}-cell~="align.#{$name}:start"] {
+				align-self: flex-start;
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:center"] {
+				align-self: center;
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:end"] {
+				align-self: flex-end;
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:baseline"] {
+				align-self: baseline;
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:stretch"] {
+				align-self: stretch;
+			}
 		}
 
 		// Justification
