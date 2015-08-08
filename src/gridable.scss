@@ -188,6 +188,10 @@
 		> [#{$gridable-prefix}-cell~="offset:#{$columns}"] {
 			margin-left: percentage($columns / $gridable-columns);
 		}
+
+		> [#{$gridable-prefix}-cell~="offset:-#{$columns}"] {
+			margin-right: percentage($columns / $gridable-columns);
+		}
 	}
 }
 

@@ -299,38 +299,74 @@
 [gridable-grid] > [gridable-cell~="offset:1"] {
   margin-left: 8.33333%; }
 
+[gridable-grid] > [gridable-cell~="offset:-1"] {
+  margin-right: 8.33333%; }
+
 [gridable-grid] > [gridable-cell~="offset:2"] {
   margin-left: 16.66667%; }
+
+[gridable-grid] > [gridable-cell~="offset:-2"] {
+  margin-right: 16.66667%; }
 
 [gridable-grid] > [gridable-cell~="offset:3"] {
   margin-left: 25%; }
 
+[gridable-grid] > [gridable-cell~="offset:-3"] {
+  margin-right: 25%; }
+
 [gridable-grid] > [gridable-cell~="offset:4"] {
   margin-left: 33.33333%; }
+
+[gridable-grid] > [gridable-cell~="offset:-4"] {
+  margin-right: 33.33333%; }
 
 [gridable-grid] > [gridable-cell~="offset:5"] {
   margin-left: 41.66667%; }
 
+[gridable-grid] > [gridable-cell~="offset:-5"] {
+  margin-right: 41.66667%; }
+
 [gridable-grid] > [gridable-cell~="offset:6"] {
   margin-left: 50%; }
+
+[gridable-grid] > [gridable-cell~="offset:-6"] {
+  margin-right: 50%; }
 
 [gridable-grid] > [gridable-cell~="offset:7"] {
   margin-left: 58.33333%; }
 
+[gridable-grid] > [gridable-cell~="offset:-7"] {
+  margin-right: 58.33333%; }
+
 [gridable-grid] > [gridable-cell~="offset:8"] {
   margin-left: 66.66667%; }
+
+[gridable-grid] > [gridable-cell~="offset:-8"] {
+  margin-right: 66.66667%; }
 
 [gridable-grid] > [gridable-cell~="offset:9"] {
   margin-left: 75%; }
 
+[gridable-grid] > [gridable-cell~="offset:-9"] {
+  margin-right: 75%; }
+
 [gridable-grid] > [gridable-cell~="offset:10"] {
   margin-left: 83.33333%; }
+
+[gridable-grid] > [gridable-cell~="offset:-10"] {
+  margin-right: 83.33333%; }
 
 [gridable-grid] > [gridable-cell~="offset:11"] {
   margin-left: 91.66667%; }
 
+[gridable-grid] > [gridable-cell~="offset:-11"] {
+  margin-right: 91.66667%; }
+
 [gridable-grid] > [gridable-cell~="offset:12"] {
   margin-left: 100%; }
+
+[gridable-grid] > [gridable-cell~="offset:-12"] {
+  margin-right: 100%; }
 
 @media (min-width: 400px) {
   [gridable-grid] > [gridable-cell~="hide.tiny"] {
