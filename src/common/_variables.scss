@@ -2,9 +2,13 @@
 
 $gridable-prefix: gridable !default;
 $gridable-columns: 12 !default;
-$gridable-gutter: 10px !default;
-$gridable-gutter-multiplier: 2.5 !default;
-$gridable-gutter-divider: 2.5 !default;
+$gridable-gutter: normal !default;
+$gridable-gutters: (
+	none: 0,
+	normal: 10px,
+	wide: 25px,
+	narrow: 5px
+) !default;
 $gridable-mediaquery: true !default;
 $gridable-breakpoints: (
 	tiny: "(min-width: 400px)",

@@ -126,35 +126,23 @@
 }
 
 // Gutter
-[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="gutter:normal"] {
-	margin: 0 (- $gridable-gutter);
+@each $key, $gutter in $gridable-gutters {
+	@if $key == $gridable-gutter {
+		[#{$gridable-prefix}-grid] {
+			margin: 0 (- $gutter);
 
-	> [#{$gridable-prefix}-cell] {
-		padding: 0 $gridable-gutter;
+			> [#{$gridable-prefix}-cell] {
+				padding: 0 $gutter;
+			}
+		}
 	}
-}
 
-[#{$gridable-prefix}-grid~="gutter:narrow"] {
-	margin: 0 (- $gridable-gutter / $gridable-gutter-divider);
+	[#{$gridable-prefix}-grid~="gutter:#{$key}"] {
+		margin: 0 (- $gutter);
 
-	> [#{$gridable-prefix}-cell] {
-		padding: 0 ($gridable-gutter / $gridable-gutter-divider);
-	}
-}
-
-[#{$gridable-prefix}-grid~="gutter:wide"] {
-	margin: 0 (- $gridable-gutter * $gridable-gutter-multiplier);
-
-	> [#{$gridable-prefix}-cell] {
-		padding: 0 ($gridable-gutter * $gridable-gutter-multiplier);
-	}
-}
-
-[#{$gridable-prefix}-grid~="gutter:off"] {
-	margin: 0;
-
-	> [#{$gridable-prefix}-cell] {
-		padding: 0;
+		> [#{$gridable-prefix}-cell] {
+			padding: 0 $gutter;
+		}
 	}
 }
 
@@ -307,32 +295,13 @@
 		}
 
 		// Gutter
-		[#{$gridable-prefix}-grid~="gutter.#{$name}:normal"] {
-			margin: 0 (- $gridable-gutter);
+		@each $key, $gutter in $gridable-gutters {
+			[#{$gridable-prefix}-grid~="gutter.#{$name}:#{$key}"] {
+				margin: 0 (- $gutter);
 
-			> [#{$gridable-prefix}-cell] {
-				padding: 0 $gridable-gutter;
-			}
-		}
-		[#{$gridable-prefix}-grid~="gutter.#{$name}:narrow"] {
-			margin: 0 (- $gridable-gutter / $gridable-gutter-divider);
-
-			> [#{$gridable-prefix}-cell] {
-				padding: 0 ($gridable-gutter / $gridable-gutter-divider);
-			}
-		}
-		[#{$gridable-prefix}-grid~="gutter.#{$name}:wide"] {
-			margin: 0 (- $gridable-gutter * $gridable-gutter-multiplier);
-
-			> [#{$gridable-prefix}-cell] {
-				padding: 0 ($gridable-gutter * $gridable-gutter-multiplier);
-			}
-		}
-		[#{$gridable-prefix}-grid~="gutter.#{$name}:off"] {
-			margin: 0;
-
-			> [#{$gridable-prefix}-cell] {
-				padding: 0;
+				> [#{$gridable-prefix}-cell] {
+					padding: 0 $gutter;
+				}
 			}
 		}
 
