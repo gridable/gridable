@@ -89,6 +89,11 @@
       -ms-flex-item-align: end;
           align-self: flex-end; }
 
+[gridable-grid] > [gridable-cell~="align:fit"] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 [gridable-grid], [gridable-grid~="justify:start"] {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;

@@ -92,6 +92,10 @@
 	> [#{$gridable-prefix}-cell~="align:end"] {
 		align-self: flex-end;
 	}
+
+	> [#{$gridable-prefix}-cell~="align:fit"] {
+		display: flex;
+	}
 }
 
 // Justification
