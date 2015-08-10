@@ -5,8 +5,7 @@
 
 // Base
 [#{$gridable-prefix}-grid] {
-	$options: (cell: '[#{$gridable-prefix}-cell]');
-	@include gridable-grid($options...);
+	@include gridable-grid;
 }
 
 // Visibility
@@ -123,18 +122,18 @@
 @each $key, $gutter in $gridable-gutters {
 	@if $key == $gridable-gutter {
 		[#{$gridable-prefix}-grid] {
-			@include gridable-gutter($key, '[#{$gridable-prefix}-cell]');
+			@include gridable-gutter($key);
 		}
 	}
 
 	[#{$gridable-prefix}-grid~="gutter:#{$key}"] {
-		@include gridable-gutter($key, '[#{$gridable-prefix}-cell]');
+		@include gridable-gutter($key);
 	}
 }
 
 // Width
 @for $width from 1 through $gridable-columns {
-	[#{$gridable-prefix}-grid~="width:#{$width}"] > [#{$gridable-prefix}-cell],
+	[#{$gridable-prefix}-grid~="width:#{$width}"] > *,
 	[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="width:#{$width}"] {
 		@include gridable-width($width);
 	}
@@ -282,13 +281,13 @@
 		// Gutter
 		@each $key, $gutter in $gridable-gutters {
 			[#{$gridable-prefix}-grid~="gutter.#{$name}:#{$key}"] {
-				@include gridable-gutter($key, '[#{$gridable-prefix}-cell]');
+				@include gridable-gutter($key);
 			}
 		}
 
 		// Widths
 		@for $width from 1 through $gridable-columns {
-			[#{$gridable-prefix}-grid~="width.#{$name}:#{$width}"] > [#{$gridable-prefix}-cell],
+			[#{$gridable-prefix}-grid~="width.#{$name}:#{$width}"] > *,
 			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="width.#{$name}:#{$width}"] {
 				@include gridable-width($width);
 			}
