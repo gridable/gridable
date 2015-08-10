@@ -1,12 +1,189 @@
 // _mixins.scss
 
-@mixin gridable-breakpoint($selector: null, $mediaquery: false) {
-	@if($mediaquery) {
-		@media #{$selector} {
+// Cell Width
+@mixin gridable-width($width) {
+	flex-basis: percentage($width / $gridable-columns);
+	max-width: percentage($width / $gridable-columns);
+}
+
+// Cell Offset
+@mixin gridable-offset($offset) {
+	@if $offset < 0 {
+		margin-right: percentage(abs($offset) / $gridable-columns);
+	} @else if $offset > 0 {
+		margin-left: percentage(abs($offset) / $gridable-columns);
+	} @else {
+		margin-left: 0;
+	}
+}
+
+// Cell Position
+@mixin gridable-position($position) {
+	@if $position == start {
+		order: -1;
+	} @else if $position == end {
+		order: $gridable-columns + 1;
+	} @else {
+		order: #{$position};
+	}
+}
+
+// Alignment
+@mixin gridable-align($align, $target: grid) {
+	@if $target == grid {
+		@if $align == start {
+			align-items: flex-start;
+		} @else if $align == center {
+			align-items: center;
+		} @else if $align == end {
+			align-items: flex-end;
+		} @else if $align == baseline {
+			align-items: baseline;
+		} @else if $align == stretch {
+			align-items: stretch;
+		}
+	} @else if $target == cell {
+		@if $align == start {
+			align-self: flex-start;
+		} @else if $align == center {
+			align-self: center;
+		} @else if $align == end {
+			align-self: flex-end;
+		} @else if $align == baseline {
+			align-self: baseline;
+		} @else if $align == stretch {
+			align-self: stretch;
+		}
+	}
+}
+
+// Grid Orientation
+@mixin gridable-orientate($direction, $order: normal) {
+	@if $direction == horizontal and $order == normal {
+		flex-direction: row;
+	} @else if $direction == horizontal and $order == reverse {
+		flex-direction: row-reverse;
+	} @else if $direction == vertical and $order == normal {
+		flex-direction: column;
+	} @else if $direction == vertical and $order == reverse {
+		flex-direction: column-reverse;
+	}
+}
+
+// Grid Gutter
+@mixin gridable-gutter($name, $cell: '*') {
+	$gutter: map-get($gridable-gutters, $name);
+
+	margin: 0 (- $gutter);
+
+	& > #{$cell} {
+		padding: 0 $gutter;
+	}
+}
+
+// Grid Justification
+@mixin gridable-justify($justify) {
+	@if $justify == start {
+		justify-content: flex-start;
+	} @else if $justify == center {
+		justify-content: center;
+	} @else if $justify == end {
+		justify-content: flex-end;
+	} @else if $justify == around {
+		justify-content: space-around;
+	} @else if $justify == between {
+		justify-content: space-between;
+	}
+}
+
+// Grid Wrapping
+@mixin gridable-wrap($wrap) {
+	flex-wrap: if($wrap == 'on', wrap, nowrap);
+}
+
+// Cell
+@mixin gridable-cell($width: null, $offset: null, $position: null, $align: null) {
+	box-sizing: border-box;
+	max-width: 100%;
+	flex: 1 0 0%;
+
+	// Width
+	@if $width {
+		@include gridable-width($width);
+	}
+
+	// Offset
+	@if $offset {
+		@include gridable-offset($offset);
+	}
+
+	// Position
+	@if $position {
+		@include gridable-position($position);
+	}
+
+	// Alignment
+	@if $align {
+		@include gridable-align($align, cell);
+	}
+}
+
+// Grid
+@mixin gridable-grid($direction: null, $order: null, $gutter: null, $justify: null, $align: null, $wrap: null, $width: null, $cell: '*') {
+	box-sizing: border-box;
+	display: flex;
+
+	// Orientation
+	@if $direction or $order {
+		@include gridable-orientate($direction, $order);
+	}
+
+	// Gutter
+	@if $gutter {
+		@include gridable-gutter($gutter);
+	}
+
+	// Justification
+	@if $justify {
+		@include gridable-justify($justify);
+	}
+
+	// Alignment
+	@if $align {
+		@include gridable-align($align);
+	}
+
+	// Wrapping
+	@if $wrap {
+		@include gridable-wrap($wrap);
+	}
+
+	// Cells
+	& > #{$cell} {
+		@include gridable-cell($width);
+	}
+}
+
+// Show
+@mixin gridable-show {
+	display: block;
+}
+
+// Hide
+@mixin gridable-hide {
+	display: none;
+}
+
+// Breakpoint
+@mixin gridable-breakpoint($name) {
+	$breakpoint: map-get($gridable-breakpoints, $name);
+
+	@if($gridable-mediaquery) {
+		@media #{$breakpoint} {
 			@content;
 		}
 	} @else {
-		#{$selector} {
+		#{$breakpoint} {
 			@content;
 		}
 	}
