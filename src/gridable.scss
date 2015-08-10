@@ -174,7 +174,7 @@
 	}
 }
 
-// Breakpoints
+// Breakpoint
 @each $name, $selector in $gridable-breakpoints {
 	@include gridable-breakpoint($name) {
 
@@ -286,7 +286,7 @@
 			}
 		}
 
-		// Widths
+		// Width
 		@for $width from 1 through $gridable-columns {
 			[#{$gridable-prefix}-grid~="width.#{$name}:#{$width}"] > *,
 			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="width.#{$name}:#{$width}"] {
@@ -294,7 +294,7 @@
 			}
 		}
 
-		// Positions
+		// Position
 		[#{$gridable-prefix}-grid] {
 			> [#{$gridable-prefix}-cell~="position.#{$name}:start"] {
 				@include gridable-position(start);
