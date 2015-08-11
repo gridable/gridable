@@ -218,6 +218,7 @@
 		[#{$gridable-prefix}-grid~="wrap.#{$name}:on"] {
 			@include gridable-wrap(on);
 		}
+
 		[#{$gridable-prefix}-grid~="wrap.#{$name}:off"] {
 			@include gridable-wrap(off);
 		}
@@ -226,6 +227,7 @@
 		[#{$gridable-prefix}-grid~="order.#{$name}:normal"] {
 			@include gridable-orientate(horizontal);
 		}
+
 		[#{$gridable-prefix}-grid~="order.#{$name}:reverse"] {
 			@include gridable-orientate(horizontal, reverse);
 		}
@@ -239,6 +241,7 @@
 				@include gridable-orientate(horizontal, reverse);
 			}
 		}
+
 		[#{$gridable-prefix}-grid~="direction.#{$name}:vertical"] {
 			@include gridable-orientate(vertical);
 
@@ -252,15 +255,19 @@
 		[#{$gridable-prefix}-grid~="align.#{$name}:start"] {
 			@include gridable-align(start);
 		}
+
 		[#{$gridable-prefix}-grid~="align.#{$name}:center"] {
 			@include gridable-align(center);
 		}
+
 		[#{$gridable-prefix}-grid~="align.#{$name}:end"] {
 			@include gridable-align(end);
 		}
+
 		[#{$gridable-prefix}-grid~="align.#{$name}:baseline"] {
 			@include gridable-align(baseline);
 		}
+
 		[#{$gridable-prefix}-grid~="align.#{$name}:stretch"] {
 			@include gridable-align(stretch);
 		}
@@ -291,15 +298,19 @@
 		[#{$gridable-prefix}-grid~="justify.#{$name}:start"] {
 			@include gridable-justify(start);
 		}
+
 		[#{$gridable-prefix}-grid~="justify.#{$name}:center"] {
 			@include gridable-justify(center);
 		}
+
 		[#{$gridable-prefix}-grid~="justify.#{$name}:end"] {
 			@include gridable-justify(end);
 		}
+
 		[#{$gridable-prefix}-grid~="justify.#{$name}:between"] {
 			@include gridable-justify(between);
 		}
+
 		[#{$gridable-prefix}-grid~="justify.#{$name}:around"] {
 			@include gridable-justify(around);
 		}
@@ -308,18 +319,23 @@
 		[#{$gridable-prefix}-grid~="distribute.#{$name}:start"] {
 			@include gridable-distribute(start);
 		}
+
 		[#{$gridable-prefix}-grid~="distribute.#{$name}:center"] {
 			@include gridable-distribute(center);
 		}
+
 		[#{$gridable-prefix}-grid~="distribute.#{$name}:end"] {
 			@include gridable-distribute(end);
 		}
+
 		[#{$gridable-prefix}-grid~="distribute.#{$name}:stretch"] {
 			@include gridable-distribute(stretch);
 		}
+
 		[#{$gridable-prefix}-grid~="distribute.#{$name}:between"] {
 			@include gridable-distribute(between);
 		}
+
 		[#{$gridable-prefix}-grid~="distribute.#{$name}:around"] {
 			@include gridable-distribute(around);
 		}
