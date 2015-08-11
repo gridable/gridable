@@ -96,6 +96,23 @@
 	}
 }
 
+// Grid Distribution
+@mixin gridable-distribute($distribute) {
+	@if $distribute == start {
+		align-content: flex-start;
+	} @else if $distribute == center {
+		align-content: center;
+	} @else if $distribute == end {
+		align-content: flex-end;
+	} @else if $distribute == stretch {
+		align-content: stretch;
+	} @else if $distribute == around {
+		align-content: space-around;
+	} @else if $distribute == between {
+		align-content: space-between;
+	}
+}
+
 // Grid Wrapping
 @mixin gridable-wrap($wrap) {
 	flex-wrap: if($wrap == 'on', wrap, nowrap);

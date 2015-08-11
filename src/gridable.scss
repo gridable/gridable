@@ -118,6 +118,31 @@
 	@include gridable-justify(around);
 }
 
+// Distribution
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="distribute:start"] {
+	@include gridable-distribute(start);
+}
+
+[#{$gridable-prefix}-grid~="distribute:center"] {
+	@include gridable-distribute(center);
+}
+
+[#{$gridable-prefix}-grid~="distribute:end"] {
+	@include gridable-distribute(end);
+}
+
+[#{$gridable-prefix}-grid~="distribute:stretch"] {
+	@include gridable-distribute(stretch);
+}
+
+[#{$gridable-prefix}-grid~="distribute:between"] {
+	@include gridable-distribute(between);
+}
+
+[#{$gridable-prefix}-grid~="distribute:around"] {
+	@include gridable-distribute(around);
+}
+
 // Gutter
 @each $key, $gutter in $gridable-gutters {
 	@if $key == $gridable-gutter {
@@ -277,6 +302,26 @@
 		}
 		[#{$gridable-prefix}-grid~="justify.#{$name}:around"] {
 			@include gridable-justify(around);
+		}
+
+		// Distribution
+		[#{$gridable-prefix}-grid~="distribute.#{$name}:start"] {
+			@include gridable-distribute(start);
+		}
+		[#{$gridable-prefix}-grid~="distribute.#{$name}:center"] {
+			@include gridable-distribute(center);
+		}
+		[#{$gridable-prefix}-grid~="distribute.#{$name}:end"] {
+			@include gridable-distribute(end);
+		}
+		[#{$gridable-prefix}-grid~="distribute.#{$name}:stretch"] {
+			@include gridable-distribute(stretch);
+		}
+		[#{$gridable-prefix}-grid~="distribute.#{$name}:between"] {
+			@include gridable-distribute(between);
+		}
+		[#{$gridable-prefix}-grid~="distribute.#{$name}:around"] {
+			@include gridable-distribute(around);
 		}
 
 		// Gutter
