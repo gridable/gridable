@@ -119,7 +119,7 @@
 }
 
 // Distribution
-[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="distribute:start"] {
+[#{$gridable-prefix}-grid~="distribute:start"] {
 	@include gridable-distribute(start);
 }
 
@@ -131,7 +131,7 @@
 	@include gridable-distribute(end);
 }
 
-[#{$gridable-prefix}-grid~="distribute:stretch"] {
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="distribute:stretch"] {
 	@include gridable-distribute(stretch);
 }
 

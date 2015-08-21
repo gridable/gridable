@@ -129,7 +129,7 @@
       -ms-flex-pack: distribute;
           justify-content: space-around; }
 
-[ga-grid], [ga-grid~="distribute:start"] {
+[ga-grid~="distribute:start"] {
   -webkit-align-content: flex-start;
       -ms-flex-line-pack: start;
           align-content: flex-start; }
@@ -144,7 +144,7 @@
       -ms-flex-line-pack: end;
           align-content: flex-end; }
 
-[ga-grid~="distribute:stretch"] {
+[ga-grid], [ga-grid~="distribute:stretch"] {
   -webkit-align-content: stretch;
       -ms-flex-line-pack: stretch;
           align-content: stretch; }
