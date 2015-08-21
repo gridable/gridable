@@ -5,10 +5,9 @@
 ### Added
 - Make the attribute-name prefix configurable.
 - Introduce negative offsets for cells.
-- Set homepage address in the Bower and NPM configuration files.
-
-### Fixed
-- Add missing fit-option for cell-alignment.
+- Introduce Sass mixins to use optionally.
+- Make cell offsets configurable via grid element.
+- Add distribution option to make align-content configurable.
 
 ## 0.1.0 - 2015-07-30
 
