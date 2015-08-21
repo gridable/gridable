@@ -150,6 +150,11 @@
 	box-sizing: border-box;
 	display: flex;
 
+	// Cells
+	& > * {
+		@include gridable-cell($width);
+	}
+
 	// Orientation
 	@if $direction or $order {
 		@include gridable-orientate($direction, $order);
@@ -173,11 +178,6 @@
 	// Wrapping
 	@if $wrap {
 		@include gridable-wrap($wrap);
-	}
-
-	// Cells
-	& > * {
-		@include gridable-cell($width);
 	}
 }
 
