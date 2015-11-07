@@ -1,16 +1,16 @@
 // _variables.scss
 
-$gridable-prefix: ga !default;
-$gridable-columns: 12 !default;
-$gridable-gutter: normal !default;
-$gridable-gutters: (
+$ga-prefix: ga !default;
+$ga-columns: 12 !default;
+$ga-gutter: normal !default;
+$ga-gutters: (
 	none: 0,
 	normal: 10px,
 	wide: 25px,
 	narrow: 5px
 ) !default;
-$gridable-mediaquery: true !default;
-$gridable-breakpoints: (
+$ga-mediaquery: true !default;
+$ga-breakpoints: (
 	tiny: 400px,
 	small: 800px,
 	medium: 1200px,

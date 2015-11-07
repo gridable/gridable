@@ -2,33 +2,33 @@
 
 // Visibility
 @media (orientation: portrait) {
-	[#{$gridable-prefix}-hide~="portrait"] {
-		@include gridable-hide;
+	[#{$ga-prefix}-hide~="portrait"] {
+		@include ga-hide;
 	}
 }
 
 @media (orientation: landscape) {
-	[#{$gridable-prefix}-hide~="landscape"] {
-		@include gridable-hide;
+	[#{$ga-prefix}-hide~="landscape"] {
+		@include ga-hide;
 	}
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name) {
-		[#{$gridable-prefix}-hide~="#{$name}"] {
-			@include gridable-hide;
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name) {
+		[#{$ga-prefix}-hide~="#{$name}"] {
+			@include ga-hide;
 		}
 	}
 
-	@include gridable-breakpoint($name, up) {
-		[#{$gridable-prefix}-hide~="#{$name}+"] {
-			@include gridable-hide;
+	@include ga-breakpoint($name, up) {
+		[#{$ga-prefix}-hide~="#{$name}+"] {
+			@include ga-hide;
 		}
 	}
 
-	@include gridable-breakpoint($name, down) {
-		[#{$gridable-prefix}-hide~="#{$name}-"] {
-			@include gridable-hide;
+	@include ga-breakpoint($name, down) {
+		[#{$ga-prefix}-hide~="#{$name}-"] {
+			@include ga-hide;
 		}
 	}
 }

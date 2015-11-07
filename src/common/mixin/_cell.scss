@@ -1,27 +1,27 @@
 // _cell.scss
 
-@mixin gridable-cell($width: null, $offset: null, $position: null, $align: null) {
+@mixin ga-cell($width: null, $offset: null, $position: null, $align: null) {
 	box-sizing: border-box;
 	max-width: 100%;
 	flex: 1 0 0%;
 
 	// Width
 	@if $width {
-		@include gridable-width($width);
+		@include ga-width($width);
 	}
 
 	// Offset
 	@if $offset {
-		@include gridable-offset($offset);
+		@include ga-offset($offset);
 	}
 
 	// Position
 	@if $position {
-		@include gridable-position($position);
+		@include ga-position($position);
 	}
 
 	// Alignment
 	@if $align {
-		@include gridable-align($align, cell);
+		@include ga-align($align, cell);
 	}
 }

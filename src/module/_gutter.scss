@@ -1,22 +1,22 @@
 // _gutter.scss
 
-@each $key, $gutter in $gridable-gutters {
-	@if $key == $gridable-gutter {
-		[#{$gridable-prefix}-grid] {
-			@include gridable-gutter($key);
+@each $key, $gutter in $ga-gutters {
+	@if $key == $ga-gutter {
+		[#{$ga-prefix}-grid] {
+			@include ga-gutter($key);
 		}
 	}
 
-	[#{$gridable-prefix}-grid~="gutter:#{$key}"] {
-		@include gridable-gutter($key);
+	[#{$ga-prefix}-grid~="gutter:#{$key}"] {
+		@include ga-gutter($key);
 	}
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
-		@each $key, $gutter in $gridable-gutters {
-			[#{$gridable-prefix}-grid~="gutter.#{$name}:#{$key}"] {
-				@include gridable-gutter($key);
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		@each $key, $gutter in $ga-gutters {
+			[#{$ga-prefix}-grid~="gutter.#{$name}:#{$key}"] {
+				@include ga-gutter($key);
 			}
 		}
 	}

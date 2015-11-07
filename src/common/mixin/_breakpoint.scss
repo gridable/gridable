@@ -1,10 +1,10 @@
 // _breakpoint.scss
 
-@mixin gridable-breakpoint($name, $direction: null) {
-	$min-width: map-get($gridable-breakpoints, $name);
-	$max-width: map-get($gridable-breakpoints, next(map-keys($gridable-breakpoints), $name));
+@mixin ga-breakpoint($name, $direction: null) {
+	$min-width: map-get($ga-breakpoints, $name);
+	$max-width: map-get($ga-breakpoints, next(map-keys($ga-breakpoints), $name));
 
-	@if $gridable-mediaquery {
+	@if $ga-mediaquery {
 		@if $direction == up {
 			@media (min-width: #{$min-width}) {
 				@content;

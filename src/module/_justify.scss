@@ -1,46 +1,46 @@
 // _justify.scss
 
-[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="justify:start"] {
-	@include gridable-justify(start);
+[#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="justify:start"] {
+	@include ga-justify(start);
 }
 
-[#{$gridable-prefix}-grid~="justify:center"] {
-	@include gridable-justify(center);
+[#{$ga-prefix}-grid~="justify:center"] {
+	@include ga-justify(center);
 }
 
-[#{$gridable-prefix}-grid~="justify:end"] {
-	@include gridable-justify(end);
+[#{$ga-prefix}-grid~="justify:end"] {
+	@include ga-justify(end);
 }
 
-[#{$gridable-prefix}-grid~="justify:between"] {
-	@include gridable-justify(between);
+[#{$ga-prefix}-grid~="justify:between"] {
+	@include ga-justify(between);
 }
 
-[#{$gridable-prefix}-grid~="justify:around"] {
-	@include gridable-justify(around);
+[#{$ga-prefix}-grid~="justify:around"] {
+	@include ga-justify(around);
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
 
-		[#{$gridable-prefix}-grid~="justify.#{$name}:start"] {
-			@include gridable-justify(start);
+		[#{$ga-prefix}-grid~="justify.#{$name}:start"] {
+			@include ga-justify(start);
 		}
 
-		[#{$gridable-prefix}-grid~="justify.#{$name}:center"] {
-			@include gridable-justify(center);
+		[#{$ga-prefix}-grid~="justify.#{$name}:center"] {
+			@include ga-justify(center);
 		}
 
-		[#{$gridable-prefix}-grid~="justify.#{$name}:end"] {
-			@include gridable-justify(end);
+		[#{$ga-prefix}-grid~="justify.#{$name}:end"] {
+			@include ga-justify(end);
 		}
 
-		[#{$gridable-prefix}-grid~="justify.#{$name}:between"] {
-			@include gridable-justify(between);
+		[#{$ga-prefix}-grid~="justify.#{$name}:between"] {
+			@include ga-justify(between);
 		}
 
-		[#{$gridable-prefix}-grid~="justify.#{$name}:around"] {
-			@include gridable-justify(around);
+		[#{$ga-prefix}-grid~="justify.#{$name}:around"] {
+			@include ga-justify(around);
 		}
 	}
 }

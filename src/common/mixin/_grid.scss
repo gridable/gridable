@@ -1,36 +1,36 @@
 // _grid.scss
 
-@mixin gridable-grid($direction: null, $order: null, $gutter: null, $justify: null, $align: null, $wrap: null, $width: null) {
+@mixin ga-grid($direction: null, $order: null, $gutter: null, $justify: null, $align: null, $wrap: null, $width: null) {
 	box-sizing: border-box;
 	display: flex;
 
 	// Cells
 	& > * {
-		@include gridable-cell($width);
+		@include ga-cell($width);
 	}
 
 	// Orientation
 	@if $direction or $order {
-		@include gridable-orientate($direction, $order);
+		@include ga-orientate($direction, $order);
 	}
 
 	// Gutter
 	@if $gutter {
-		@include gridable-gutter($gutter);
+		@include ga-gutter($gutter);
 	}
 
 	// Justification
 	@if $justify {
-		@include gridable-justify($justify);
+		@include ga-justify($justify);
 	}
 
 	// Alignment
 	@if $align {
-		@include gridable-align($align);
+		@include ga-align($align);
 	}
 
 	// Wrapping
 	@if $wrap {
-		@include gridable-wrap($wrap);
+		@include ga-wrap($wrap);
 	}
 }

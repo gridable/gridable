@@ -1,18 +1,18 @@
 // _width.scss
 
-@for $width from 1 through $gridable-columns {
-	[#{$gridable-prefix}-grid~="width:#{$width}"] > *,
-	[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="width:#{$width}"] {
-		@include gridable-width($width);
+@for $width from 1 through $ga-columns {
+	[#{$ga-prefix}-grid~="width:#{$width}"] > *,
+	[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="width:#{$width}"] {
+		@include ga-width($width);
 	}
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
-		@for $width from 1 through $gridable-columns {
-			[#{$gridable-prefix}-grid~="width.#{$name}:#{$width}"] > *,
-			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="width.#{$name}:#{$width}"] {
-				@include gridable-width($width);
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		@for $width from 1 through $ga-columns {
+			[#{$ga-prefix}-grid~="width.#{$name}:#{$width}"] > *,
+			[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="width.#{$name}:#{$width}"] {
+				@include ga-width($width);
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 // _justify.scss
 
-@mixin gridable-justify($justify) {
+@mixin ga-justify($justify) {
 	@if $justify == start {
 		justify-content: flex-start;
 	} @else if $justify == center {

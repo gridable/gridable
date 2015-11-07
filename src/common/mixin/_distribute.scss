@@ -1,6 +1,6 @@
 // _distribute.scss
 
-@mixin gridable-distribute($distribute) {
+@mixin ga-distribute($distribute) {
 	@if $distribute == start {
 		align-content: flex-start;
 	} @else if $distribute == center {

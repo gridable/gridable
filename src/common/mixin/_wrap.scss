@@ -1,5 +1,5 @@
 // _wrap.scss
 
-@mixin gridable-wrap($wrap) {
+@mixin ga-wrap($wrap) {
 	flex-wrap: if($wrap == 'on', wrap, nowrap);
 }

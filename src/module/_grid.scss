@@ -1,5 +1,5 @@
 // _grid.scss
 
-[#{$gridable-prefix}-grid] {
-	@include gridable-grid;
+[#{$ga-prefix}-grid] {
+	@include ga-grid;
 }

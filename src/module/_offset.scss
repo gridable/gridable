@@ -1,38 +1,38 @@
 // _offset.scss
 
-[#{$gridable-prefix}-grid~="offset:0"] > *,
-[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset:0"] {
-	@include gridable-offset(0);
+[#{$ga-prefix}-grid~="offset:0"] > *,
+[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset:0"] {
+	@include ga-offset(0);
 }
 
-@for $offset from 1 through $gridable-columns {
-	[#{$gridable-prefix}-grid~="offset:#{$offset}"] > *,
-	[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset:#{$offset}"] {
-		@include gridable-offset($offset);
+@for $offset from 1 through $ga-columns {
+	[#{$ga-prefix}-grid~="offset:#{$offset}"] > *,
+	[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset:#{$offset}"] {
+		@include ga-offset($offset);
 	}
 
-	[#{$gridable-prefix}-grid~="offset:-#{$offset}"] > *,
-	[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset:-#{$offset}"] {
-		@include gridable-offset(-$offset);
+	[#{$ga-prefix}-grid~="offset:-#{$offset}"] > *,
+	[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset:-#{$offset}"] {
+		@include ga-offset(-$offset);
 	}
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
-		[#{$gridable-prefix}-grid~="offset.#{$name}:0"] > *,
-		[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset.#{$name}:0"] {
-			@include gridable-offset(0);
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		[#{$ga-prefix}-grid~="offset.#{$name}:0"] > *,
+		[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset.#{$name}:0"] {
+			@include ga-offset(0);
 		}
 
-		@for $offset from 1 through $gridable-columns {
-			[#{$gridable-prefix}-grid~="offset.#{$name}:#{$offset}"] > *,
-			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset.#{$name}:#{$offset}"] {
-				@include gridable-offset($offset);
+		@for $offset from 1 through $ga-columns {
+			[#{$ga-prefix}-grid~="offset.#{$name}:#{$offset}"] > *,
+			[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset.#{$name}:#{$offset}"] {
+				@include ga-offset($offset);
 			}
 
-			[#{$gridable-prefix}-grid~="offset.#{$name}:-#{$offset}"] > *,
-			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset.#{$name}:-#{$offset}"] {
-				@include gridable-offset(-$offset);
+			[#{$ga-prefix}-grid~="offset.#{$name}:-#{$offset}"] > *,
+			[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset.#{$name}:-#{$offset}"] {
+				@include ga-offset(-$offset);
 			}
 		}
 	}

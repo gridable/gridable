@@ -1,35 +1,35 @@
 // _position.scss
 
-[#{$gridable-prefix}-grid] {
-	> [#{$gridable-prefix}-cell~="position:start"] {
-		@include gridable-position(start);
+[#{$ga-prefix}-grid] {
+	> [#{$ga-prefix}-cell~="position:start"] {
+		@include ga-position(start);
 	}
 
-	> [#{$gridable-prefix}-cell~="position:end"] {
-		@include gridable-position(end);
+	> [#{$ga-prefix}-cell~="position:end"] {
+		@include ga-position(end);
 	}
 
-	@for $position from 1 through $gridable-columns {
-		> [#{$gridable-prefix}-cell~="position:#{$position}"] {
-			@include gridable-position($position);
+	@for $position from 1 through $ga-columns {
+		> [#{$ga-prefix}-cell~="position:#{$position}"] {
+			@include ga-position($position);
 		}
 	}
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
-		[#{$gridable-prefix}-grid] {
-			> [#{$gridable-prefix}-cell~="position.#{$name}:start"] {
-				@include gridable-position(start);
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		[#{$ga-prefix}-grid] {
+			> [#{$ga-prefix}-cell~="position.#{$name}:start"] {
+				@include ga-position(start);
 			}
 
-			> [#{$gridable-prefix}-cell~="position.#{$name}:end"] {
-				@include gridable-position(end);
+			> [#{$ga-prefix}-cell~="position.#{$name}:end"] {
+				@include ga-position(end);
 			}
 
-			@for $position from 1 through $gridable-columns {
-				> [#{$gridable-prefix}-cell~="position.#{$name}:#{$position}"] {
-					@include gridable-position($position);
+			@for $position from 1 through $ga-columns {
+				> [#{$ga-prefix}-cell~="position.#{$name}:#{$position}"] {
+					@include ga-position($position);
 				}
 			}
 		}

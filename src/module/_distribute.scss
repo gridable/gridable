@@ -1,54 +1,54 @@
 // _distribute.scss
 
-[#{$gridable-prefix}-grid~="distribute:start"] {
-	@include gridable-distribute(start);
+[#{$ga-prefix}-grid~="distribute:start"] {
+	@include ga-distribute(start);
 }
 
-[#{$gridable-prefix}-grid~="distribute:center"] {
-	@include gridable-distribute(center);
+[#{$ga-prefix}-grid~="distribute:center"] {
+	@include ga-distribute(center);
 }
 
-[#{$gridable-prefix}-grid~="distribute:end"] {
-	@include gridable-distribute(end);
+[#{$ga-prefix}-grid~="distribute:end"] {
+	@include ga-distribute(end);
 }
 
-[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="distribute:stretch"] {
-	@include gridable-distribute(stretch);
+[#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="distribute:stretch"] {
+	@include ga-distribute(stretch);
 }
 
-[#{$gridable-prefix}-grid~="distribute:between"] {
-	@include gridable-distribute(between);
+[#{$ga-prefix}-grid~="distribute:between"] {
+	@include ga-distribute(between);
 }
 
-[#{$gridable-prefix}-grid~="distribute:around"] {
-	@include gridable-distribute(around);
+[#{$ga-prefix}-grid~="distribute:around"] {
+	@include ga-distribute(around);
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
 
-		[#{$gridable-prefix}-grid~="distribute.#{$name}:start"] {
-			@include gridable-distribute(start);
+		[#{$ga-prefix}-grid~="distribute.#{$name}:start"] {
+			@include ga-distribute(start);
 		}
 
-		[#{$gridable-prefix}-grid~="distribute.#{$name}:center"] {
-			@include gridable-distribute(center);
+		[#{$ga-prefix}-grid~="distribute.#{$name}:center"] {
+			@include ga-distribute(center);
 		}
 
-		[#{$gridable-prefix}-grid~="distribute.#{$name}:end"] {
-			@include gridable-distribute(end);
+		[#{$ga-prefix}-grid~="distribute.#{$name}:end"] {
+			@include ga-distribute(end);
 		}
 
-		[#{$gridable-prefix}-grid~="distribute.#{$name}:stretch"] {
-			@include gridable-distribute(stretch);
+		[#{$ga-prefix}-grid~="distribute.#{$name}:stretch"] {
+			@include ga-distribute(stretch);
 		}
 
-		[#{$gridable-prefix}-grid~="distribute.#{$name}:between"] {
-			@include gridable-distribute(between);
+		[#{$ga-prefix}-grid~="distribute.#{$name}:between"] {
+			@include ga-distribute(between);
 		}
 
-		[#{$gridable-prefix}-grid~="distribute.#{$name}:around"] {
-			@include gridable-distribute(around);
+		[#{$ga-prefix}-grid~="distribute.#{$name}:around"] {
+			@include ga-distribute(around);
 		}
 	}
 }

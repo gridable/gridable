@@ -1,89 +1,89 @@
 // _align.scss
 
-[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="align:start"] {
-	@include gridable-align(start);
+[#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="align:start"] {
+	@include ga-align(start);
 }
 
-[#{$gridable-prefix}-grid~="align:center"] {
-	@include gridable-align(center);
+[#{$ga-prefix}-grid~="align:center"] {
+	@include ga-align(center);
 }
 
-[#{$gridable-prefix}-grid~="align:end"] {
-	@include gridable-align(end);
+[#{$ga-prefix}-grid~="align:end"] {
+	@include ga-align(end);
 }
 
-[#{$gridable-prefix}-grid~="align:baseline"] {
-	@include gridable-align(baseline);
+[#{$ga-prefix}-grid~="align:baseline"] {
+	@include ga-align(baseline);
 }
 
-[#{$gridable-prefix}-grid~="align:stretch"] {
-	@include gridable-align(stretch);
+[#{$ga-prefix}-grid~="align:stretch"] {
+	@include ga-align(stretch);
 }
 
-[#{$gridable-prefix}-grid] {
-	> [#{$gridable-prefix}-cell~="align:start"] {
-		@include gridable-align(start, cell);
+[#{$ga-prefix}-grid] {
+	> [#{$ga-prefix}-cell~="align:start"] {
+		@include ga-align(start, cell);
 	}
 
-	> [#{$gridable-prefix}-cell~="align:center"] {
-		@include gridable-align(center, cell);
+	> [#{$ga-prefix}-cell~="align:center"] {
+		@include ga-align(center, cell);
 	}
 
-	> [#{$gridable-prefix}-cell~="align:end"] {
-		@include gridable-align(end, cell);
+	> [#{$ga-prefix}-cell~="align:end"] {
+		@include ga-align(end, cell);
 	}
 
-	> [#{$gridable-prefix}-cell~="align:baseline"] {
-		@include gridable-align(baseline, cell);
+	> [#{$ga-prefix}-cell~="align:baseline"] {
+		@include ga-align(baseline, cell);
 	}
 
-	> [#{$gridable-prefix}-cell~="align:stretch"] {
-		@include gridable-align(stretch, cell);
+	> [#{$ga-prefix}-cell~="align:stretch"] {
+		@include ga-align(stretch, cell);
 	}
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
 
-		[#{$gridable-prefix}-grid~="align.#{$name}:start"] {
-			@include gridable-align(start);
+		[#{$ga-prefix}-grid~="align.#{$name}:start"] {
+			@include ga-align(start);
 		}
 
-		[#{$gridable-prefix}-grid~="align.#{$name}:center"] {
-			@include gridable-align(center);
+		[#{$ga-prefix}-grid~="align.#{$name}:center"] {
+			@include ga-align(center);
 		}
 
-		[#{$gridable-prefix}-grid~="align.#{$name}:end"] {
-			@include gridable-align(end);
+		[#{$ga-prefix}-grid~="align.#{$name}:end"] {
+			@include ga-align(end);
 		}
 
-		[#{$gridable-prefix}-grid~="align.#{$name}:baseline"] {
-			@include gridable-align(baseline);
+		[#{$ga-prefix}-grid~="align.#{$name}:baseline"] {
+			@include ga-align(baseline);
 		}
 
-		[#{$gridable-prefix}-grid~="align.#{$name}:stretch"] {
-			@include gridable-align(stretch);
+		[#{$ga-prefix}-grid~="align.#{$name}:stretch"] {
+			@include ga-align(stretch);
 		}
 
-		[#{$gridable-prefix}-grid] {
-			> [#{$gridable-prefix}-cell~="align.#{$name}:start"] {
-				@include gridable-align(start, cell);
+		[#{$ga-prefix}-grid] {
+			> [#{$ga-prefix}-cell~="align.#{$name}:start"] {
+				@include ga-align(start, cell);
 			}
 
-			> [#{$gridable-prefix}-cell~="align.#{$name}:center"] {
-				@include gridable-align(center, cell);
+			> [#{$ga-prefix}-cell~="align.#{$name}:center"] {
+				@include ga-align(center, cell);
 			}
 
-			> [#{$gridable-prefix}-cell~="align.#{$name}:end"] {
-				@include gridable-align(end, cell);
+			> [#{$ga-prefix}-cell~="align.#{$name}:end"] {
+				@include ga-align(end, cell);
 			}
 
-			> [#{$gridable-prefix}-cell~="align.#{$name}:baseline"] {
-				@include gridable-align(baseline, cell);
+			> [#{$ga-prefix}-cell~="align.#{$name}:baseline"] {
+				@include ga-align(baseline, cell);
 			}
 
-			> [#{$gridable-prefix}-cell~="align.#{$name}:stretch"] {
-				@include gridable-align(stretch, cell);
+			> [#{$ga-prefix}-cell~="align.#{$name}:stretch"] {
+				@include ga-align(stretch, cell);
 			}
 		}
 	}

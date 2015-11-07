@@ -1,10 +1,10 @@
 // _offset.scss
 
-@mixin gridable-offset($offset) {
+@mixin ga-offset($offset) {
 	@if $offset < 0 {
-		margin-right: percentage(abs($offset) / $gridable-columns);
+		margin-right: percentage(abs($offset) / $ga-columns);
 	} @else if $offset > 0 {
-		margin-left: percentage(abs($offset) / $gridable-columns);
+		margin-left: percentage(abs($offset) / $ga-columns);
 	} @else {
 		margin-left: 0;
 	}

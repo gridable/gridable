@@ -1,6 +1,6 @@
 // _orientate.scss
 
-@mixin gridable-orientate($direction, $order: normal) {
+@mixin ga-orientate($direction, $order: normal) {
 	@if $direction == horizontal and $order == normal {
 		flex-direction: row;
 	} @else if $direction == horizontal and $order == reverse {

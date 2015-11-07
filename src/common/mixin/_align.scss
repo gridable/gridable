@@ -1,6 +1,6 @@
 // align.scss
 
-@mixin gridable-align($align, $target: grid) {
+@mixin ga-align($align, $target: grid) {
 	@if $target == grid {
 		@if $align == start {
 			align-items: flex-start;

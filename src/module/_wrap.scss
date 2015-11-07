@@ -1,22 +1,22 @@
 // _wrap.scss
 
-[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="wrap:on"] {
-	@include gridable-wrap(on);
+[#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="wrap:on"] {
+	@include ga-wrap(on);
 }
 
-[#{$gridable-prefix}-grid~="wrap:off"] {
-	@include gridable-wrap(off);
+[#{$ga-prefix}-grid~="wrap:off"] {
+	@include ga-wrap(off);
 }
 
-@each $name, $selector in $gridable-breakpoints {
-	@include gridable-breakpoint($name, up) {
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
 
-		[#{$gridable-prefix}-grid~="wrap.#{$name}:on"] {
-			@include gridable-wrap(on);
+		[#{$ga-prefix}-grid~="wrap.#{$name}:on"] {
+			@include ga-wrap(on);
 		}
 
-		[#{$gridable-prefix}-grid~="wrap.#{$name}:off"] {
-			@include gridable-wrap(off);
+		[#{$ga-prefix}-grid~="wrap.#{$name}:off"] {
+			@include ga-wrap(off);
 		}
 	}
 }
