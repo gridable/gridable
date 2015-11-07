@@ -5,15 +5,15 @@ $ga-columns: 12 !default;
 $ga-gutter: normal !default;
 $ga-gutters: (
 	none: 0,
-	normal: 10px,
-	wide: 25px,
-	narrow: 5px
+	normal: 1rem,
+	wide: 2rem,
+	narrow: .5rem
 ) !default;
 $ga-mediaquery: true !default;
 $ga-breakpoints: (
-	tiny: 400px,
-	small: 800px,
-	medium: 1200px,
-	large: 1600px,
-	huge: 2000px
+	tiny: 25rem,
+	small: 50rem,
+	medium: 75rem,
+	large: 100rem,
+	huge: 125rem
 ) !default;
