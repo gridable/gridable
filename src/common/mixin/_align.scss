@@ -1,0 +1,29 @@
+// align.scss
+
+@mixin gridable-align($align, $target: grid) {
+	@if $target == grid {
+		@if $align == start {
+			align-items: flex-start;
+		} @else if $align == center {
+			align-items: center;
+		} @else if $align == end {
+			align-items: flex-end;
+		} @else if $align == baseline {
+			align-items: baseline;
+		} @else if $align == stretch {
+			align-items: stretch;
+		}
+	} @else if $target == cell {
+		@if $align == start {
+			align-self: flex-start;
+		} @else if $align == center {
+			align-self: center;
+		} @else if $align == end {
+			align-self: flex-end;
+		} @else if $align == baseline {
+			align-self: baseline;
+		} @else if $align == stretch {
+			align-self: stretch;
+		}
+	}
+}

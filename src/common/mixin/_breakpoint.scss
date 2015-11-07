@@ -1,0 +1,35 @@
+// _breakpoint.scss
+
+@mixin gridable-breakpoint($name, $direction: null) {
+	$min-width: map-get($gridable-breakpoints, $name);
+	$max-width: map-get($gridable-breakpoints, next(map-keys($gridable-breakpoints), $name));
+
+	@if $gridable-mediaquery {
+		@if $direction == up {
+			@media (min-width: #{$min-width}) {
+				@content;
+			}
+		}
+
+		@if $direction == down and $max-width {
+			@media (max-width: #{$max-width}) {
+				@content;
+			}
+		}
+
+		@if $direction == null and $max-width {
+			@media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+				@content;
+			}
+		} @else if $direction == null {
+			@media (min-width: #{$min-width}) {
+				@content;
+			}
+		}
+
+	} @else {
+		#{$name} {
+			@content;
+		}
+	}
+}

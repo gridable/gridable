@@ -1,0 +1,40 @@
+// _direct.scss
+
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="direct:horizontal"] {
+	@include gridable-orientate(horizontal);
+
+	&[#{$gridable-prefix}-grid~="order:reverse"] {
+		@include gridable-orientate(horizontal, reverse);
+	}
+}
+
+[#{$gridable-prefix}-grid~="direct:vertical"] {
+	@include gridable-orientate(vertical);
+
+	&[#{$gridable-prefix}-grid~="order:reverse"] {
+		@include gridable-orientate(vertical, reverse);
+	}
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name, up) {
+
+		[#{$gridable-prefix}-grid~="direct.#{$name}:horizontal"] {
+			@include gridable-orientate(horizontal);
+
+			&[#{$gridable-prefix}-grid~="order:reverse"],
+			&[#{$gridable-prefix}-grid~="order.#{$name}:reverse"] {
+				@include gridable-orientate(horizontal, reverse);
+			}
+		}
+
+		[#{$gridable-prefix}-grid~="direct.#{$name}:vertical"] {
+			@include gridable-orientate(vertical);
+
+			&[#{$gridable-prefix}-grid~="order:reverse"],
+			&[#{$gridable-prefix}-grid~="order.#{$name}:reverse"] {
+				@include gridable-orientate(vertical, reverse);
+			}
+		}
+	}
+}

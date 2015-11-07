@@ -1,0 +1,46 @@
+// _justify.scss
+
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="justify:start"] {
+	@include gridable-justify(start);
+}
+
+[#{$gridable-prefix}-grid~="justify:center"] {
+	@include gridable-justify(center);
+}
+
+[#{$gridable-prefix}-grid~="justify:end"] {
+	@include gridable-justify(end);
+}
+
+[#{$gridable-prefix}-grid~="justify:between"] {
+	@include gridable-justify(between);
+}
+
+[#{$gridable-prefix}-grid~="justify:around"] {
+	@include gridable-justify(around);
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name, up) {
+
+		[#{$gridable-prefix}-grid~="justify.#{$name}:start"] {
+			@include gridable-justify(start);
+		}
+
+		[#{$gridable-prefix}-grid~="justify.#{$name}:center"] {
+			@include gridable-justify(center);
+		}
+
+		[#{$gridable-prefix}-grid~="justify.#{$name}:end"] {
+			@include gridable-justify(end);
+		}
+
+		[#{$gridable-prefix}-grid~="justify.#{$name}:between"] {
+			@include gridable-justify(between);
+		}
+
+		[#{$gridable-prefix}-grid~="justify.#{$name}:around"] {
+			@include gridable-justify(around);
+		}
+	}
+}

@@ -1,0 +1,6 @@
+// _width.scss
+
+@mixin gridable-width($width) {
+	flex-basis: percentage($width / $gridable-columns);
+	max-width: percentage($width / $gridable-columns);
+}

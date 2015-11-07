@@ -1,0 +1,34 @@
+// _utility.scss
+
+// Visibility
+@media (orientation: portrait) {
+	[#{$gridable-prefix}-hide~="portrait"] {
+		@include gridable-hide;
+	}
+}
+
+@media (orientation: landscape) {
+	[#{$gridable-prefix}-hide~="landscape"] {
+		@include gridable-hide;
+	}
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name) {
+		[#{$gridable-prefix}-hide~="#{$name}"] {
+			@include gridable-hide;
+		}
+	}
+
+	@include gridable-breakpoint($name, up) {
+		[#{$gridable-prefix}-hide~="#{$name}+"] {
+			@include gridable-hide;
+		}
+	}
+
+	@include gridable-breakpoint($name, down) {
+		[#{$gridable-prefix}-hide~="#{$name}-"] {
+			@include gridable-hide;
+		}
+	}
+}

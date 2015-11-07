@@ -1,0 +1,22 @@
+// _wrap.scss
+
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="wrap:on"] {
+	@include gridable-wrap(on);
+}
+
+[#{$gridable-prefix}-grid~="wrap:off"] {
+	@include gridable-wrap(off);
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name, up) {
+
+		[#{$gridable-prefix}-grid~="wrap.#{$name}:on"] {
+			@include gridable-wrap(on);
+		}
+
+		[#{$gridable-prefix}-grid~="wrap.#{$name}:off"] {
+			@include gridable-wrap(off);
+		}
+	}
+}

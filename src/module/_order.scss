@@ -1,0 +1,22 @@
+// _order.scss
+
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="order:normal"] {
+	@include gridable-orientate(horizontal);
+}
+
+[#{$gridable-prefix}-grid~="order:reverse"] {
+	@include gridable-orientate(horizontal, reverse);
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name, up) {
+
+		[#{$gridable-prefix}-grid~="order.#{$name}:normal"] {
+			@include gridable-orientate(horizontal);
+		}
+
+		[#{$gridable-prefix}-grid~="order.#{$name}:reverse"] {
+			@include gridable-orientate(horizontal, reverse);
+		}
+	}
+}

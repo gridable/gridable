@@ -1,0 +1,90 @@
+// _align.scss
+
+[#{$gridable-prefix}-grid], [#{$gridable-prefix}-grid~="align:start"] {
+	@include gridable-align(start);
+}
+
+[#{$gridable-prefix}-grid~="align:center"] {
+	@include gridable-align(center);
+}
+
+[#{$gridable-prefix}-grid~="align:end"] {
+	@include gridable-align(end);
+}
+
+[#{$gridable-prefix}-grid~="align:baseline"] {
+	@include gridable-align(baseline);
+}
+
+[#{$gridable-prefix}-grid~="align:stretch"] {
+	@include gridable-align(stretch);
+}
+
+[#{$gridable-prefix}-grid] {
+	> [#{$gridable-prefix}-cell~="align:start"] {
+		@include gridable-align(start, cell);
+	}
+
+	> [#{$gridable-prefix}-cell~="align:center"] {
+		@include gridable-align(center, cell);
+	}
+
+	> [#{$gridable-prefix}-cell~="align:end"] {
+		@include gridable-align(end, cell);
+	}
+
+	> [#{$gridable-prefix}-cell~="align:baseline"] {
+		@include gridable-align(baseline, cell);
+	}
+
+	> [#{$gridable-prefix}-cell~="align:stretch"] {
+		@include gridable-align(stretch, cell);
+	}
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name, up) {
+
+		[#{$gridable-prefix}-grid~="align.#{$name}:start"] {
+			@include gridable-align(start);
+		}
+
+		[#{$gridable-prefix}-grid~="align.#{$name}:center"] {
+			@include gridable-align(center);
+		}
+
+		[#{$gridable-prefix}-grid~="align.#{$name}:end"] {
+			@include gridable-align(end);
+		}
+
+		[#{$gridable-prefix}-grid~="align.#{$name}:baseline"] {
+			@include gridable-align(baseline);
+		}
+
+		[#{$gridable-prefix}-grid~="align.#{$name}:stretch"] {
+			@include gridable-align(stretch);
+		}
+
+		[#{$gridable-prefix}-grid] {
+			> [#{$gridable-prefix}-cell~="align.#{$name}:start"] {
+				@include gridable-align(start, cell);
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:center"] {
+				@include gridable-align(center, cell);
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:end"] {
+				@include gridable-align(end, cell);
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:baseline"] {
+				@include gridable-align(baseline, cell);
+			}
+
+			> [#{$gridable-prefix}-cell~="align.#{$name}:stretch"] {
+				@include gridable-align(stretch, cell);
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+// _orientate.scss
+
+@mixin gridable-orientate($direction, $order: normal) {
+	@if $direction == horizontal and $order == normal {
+		flex-direction: row;
+	} @else if $direction == horizontal and $order == reverse {
+		flex-direction: row-reverse;
+	} @else if $direction == vertical and $order == normal {
+		flex-direction: column;
+	} @else if $direction == vertical and $order == reverse {
+		flex-direction: column-reverse;
+	}
+}

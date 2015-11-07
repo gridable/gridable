@@ -1,0 +1,39 @@
+// _offset.scss
+
+[#{$gridable-prefix}-grid~="offset:0"] > *,
+[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset:0"] {
+	@include gridable-offset(0);
+}
+
+@for $offset from 1 through $gridable-columns {
+	[#{$gridable-prefix}-grid~="offset:#{$offset}"] > *,
+	[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset:#{$offset}"] {
+		@include gridable-offset($offset);
+	}
+
+	[#{$gridable-prefix}-grid~="offset:-#{$offset}"] > *,
+	[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset:-#{$offset}"] {
+		@include gridable-offset(-$offset);
+	}
+}
+
+@each $name, $selector in $gridable-breakpoints {
+	@include gridable-breakpoint($name, up) {
+		[#{$gridable-prefix}-grid~="offset.#{$name}:0"] > *,
+		[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset.#{$name}:0"] {
+			@include gridable-offset(0);
+		}
+
+		@for $offset from 1 through $gridable-columns {
+			[#{$gridable-prefix}-grid~="offset.#{$name}:#{$offset}"] > *,
+			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset.#{$name}:#{$offset}"] {
+				@include gridable-offset($offset);
+			}
+
+			[#{$gridable-prefix}-grid~="offset.#{$name}:-#{$offset}"] > *,
+			[#{$gridable-prefix}-grid] > [#{$gridable-prefix}-cell~="offset.#{$name}:-#{$offset}"] {
+				@include gridable-offset(-$offset);
+			}
+		}
+	}
+}
