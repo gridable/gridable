@@ -1,10 +1,10 @@
 // _offset.scss
 
-@mixin ga-offset($offset) {
+@mixin ga-offset($offset, $columns: $ga-columns) {
 	@if $offset < 0 {
-		margin-right: percentage(abs($offset) / $ga-columns);
+		margin-right: percentage(abs($offset) / $columns);
 	} @else if $offset > 0 {
-		margin-left: percentage(abs($offset) / $ga-columns);
+		margin-left: percentage(abs($offset) / $columns);
 	} @else {
 		margin-left: 0;
 	}

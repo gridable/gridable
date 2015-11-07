@@ -1,7 +1,7 @@
 // _gutter.scss
 
-@mixin ga-gutter($name) {
-	$gutter: map-get($ga-gutters, $name);
+@mixin ga-gutter($name, $gutters: $ga-gutters) {
+	$gutter: map-get($gutters, $name);
 
 	margin: 0 (- $gutter);
 
