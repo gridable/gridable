@@ -2,6 +2,8 @@
 
 ## [Next][next]
 
+## [0.2.0][0.2.0] - 2015-11-08
+
 ### Added
 - Make the attribute-name prefix configurable.
 - Introduce negative offsets for cells.
@@ -19,4 +21,5 @@
 ### Added
 - Initial release.
 
-[next]: https://github.com/gridable/gridable/compare/v0.1.0...HEAD
+[next]: https://github.com/gridable/gridable/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/gridable/gridable/compare/v0.1.0...v0.2.0
