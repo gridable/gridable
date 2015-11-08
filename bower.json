@@ -1,8 +1,8 @@
 {
   "name": "gridable",
   "description": "Responsive layout-grid using flexible-box.",
+  "homepage": "http://gridable.ga/",
   "license": "MIT",
-  "homepage": "http://gridable.github.io/",
   "authors": [
     {
       "name": "Thomas Deinhamer",

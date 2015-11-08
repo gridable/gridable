@@ -1,0 +1,27 @@
+// _cell.scss
+
+@mixin ga-cell($width: null, $offset: null, $position: null, $align: null) {
+	box-sizing: border-box;
+	max-width: 100%;
+	flex: 1 0 0%;
+
+	// Width
+	@if $width {
+		@include ga-width($width);
+	}
+
+	// Offset
+	@if $offset {
+		@include ga-offset($offset);
+	}
+
+	// Position
+	@if $position {
+		@include ga-position($position);
+	}
+
+	// Alignment
+	@if $align {
+		@include ga-align($align, cell);
+	}
+}

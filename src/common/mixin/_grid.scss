@@ -1,0 +1,36 @@
+// _grid.scss
+
+@mixin ga-grid($direction: null, $order: null, $gutter: null, $justify: null, $align: null, $wrap: null, $width: null) {
+	box-sizing: border-box;
+	display: flex;
+
+	// Cells
+	> * {
+		@include ga-cell($width);
+	}
+
+	// Orientation
+	@if $direction or $order {
+		@include ga-orientate($direction, $order);
+	}
+
+	// Gutter
+	@if $gutter {
+		@include ga-gutter($gutter);
+	}
+
+	// Justification
+	@if $justify {
+		@include ga-justify($justify);
+	}
+
+	// Alignment
+	@if $align {
+		@include ga-align($align);
+	}
+
+	// Wrapping
+	@if $wrap {
+		@include ga-wrap($wrap);
+	}
+}

@@ -1,0 +1,5 @@
+// _wrap.scss
+
+@mixin ga-wrap($wrap) {
+	flex-wrap: if($wrap == 'on', wrap, nowrap);
+}

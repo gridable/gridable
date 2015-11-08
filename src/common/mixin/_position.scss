@@ -1,0 +1,11 @@
+// _position.scss
+
+@mixin ga-position($position, $columns: $ga-columns) {
+	@if $position == start {
+		order: -1;
+	} @else if $position == end {
+		order: $columns + 1;
+	} @else {
+		order: #{$position};
+	}
+}

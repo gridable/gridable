@@ -1,0 +1,6 @@
+// _next.scss
+
+@function next($list, $name) {
+	$index: index($list, $name);
+	@return if($index < length($list), nth($list, $index + 1), null);
+}

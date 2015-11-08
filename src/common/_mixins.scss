@@ -1,13 +1,15 @@
 // _mixins.scss
 
-@mixin gridable-breakpoint($selector: null, $mediaquery: false) {
-	@if($mediaquery) {
-		@media #{$selector} {
-			@content;
-		}
-	} @else {
-		#{$selector} {
-			@content;
-		}
-	}
-}
+@import 'mixin/width';
+@import 'mixin/offset';
+@import 'mixin/position';
+@import 'mixin/align';
+@import 'mixin/orientate';
+@import 'mixin/gutter';
+@import 'mixin/justify';
+@import 'mixin/distribute';
+@import 'mixin/wrap';
+@import 'mixin/cell';
+@import 'mixin/grid';
+@import 'mixin/breakpoint';
+@import 'mixin/hide';

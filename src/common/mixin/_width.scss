@@ -1,0 +1,6 @@
+// _width.scss
+
+@mixin ga-width($width, $columns: $ga-columns) {
+	flex-basis: percentage($width / $columns);
+	max-width: percentage($width / $columns);
+}

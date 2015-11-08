@@ -2,6 +2,18 @@
 
 ## [Next][next]
 
+### Added
+- Make the attribute-name prefix configurable.
+- Introduce negative offsets for cells.
+- Introduce Sass mixins to use optionally.
+- Make cell offsets configurable via grid element.
+- Add distribution option to make align-content configurable.
+
+### Changed
+- Use rem units for media-query breakpoints.
+- Rename mixins, functions and variables using a shorter prefix.
+- Restructure/move logic into separate files.
+
 ## 0.1.0 - 2015-07-30
 
 ### Added

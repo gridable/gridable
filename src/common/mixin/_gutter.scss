@@ -1,0 +1,11 @@
+// _gutter.scss
+
+@mixin ga-gutter($name, $gutters: $ga-gutters) {
+	$gutter: map-get($gutters, $name);
+
+	margin: 0 (- $gutter);
+
+	> * {
+		padding: 0 $gutter;
+	}
+}

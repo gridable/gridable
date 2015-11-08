@@ -1,0 +1,35 @@
+// _breakpoint.scss
+
+@mixin ga-breakpoint($name, $direction: null, $breakpoints: $ga-breakpoints, $mediaquery: $ga-mediaquery) {
+	$min-width: map-get($breakpoints, $name);
+	$max-width: map-get($breakpoints, next(map-keys($breakpoints), $name));
+
+	@if $mediaquery {
+		@if $direction == up {
+			@media (min-width: #{$min-width}) {
+				@content;
+			}
+		}
+
+		@if $direction == down and $max-width {
+			@media (max-width: #{$max-width}) {
+				@content;
+			}
+		}
+
+		@if $direction == null and $max-width {
+			@media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+				@content;
+			}
+		} @else if $direction == null {
+			@media (min-width: #{$min-width}) {
+				@content;
+			}
+		}
+
+	} @else {
+		#{$name} {
+			@content;
+		}
+	}
+}
