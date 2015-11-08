@@ -1,4 +1,4 @@
-// position.scss
+// _position.scss
 
 @mixin ga-position($position, $columns: $ga-columns) {
 	@if $position == start {

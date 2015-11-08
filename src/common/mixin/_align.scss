@@ -1,4 +1,4 @@
-// align.scss
+// _align.scss
 
 @mixin ga-align($align, $target: grid) {
 	@if $target == grid {
