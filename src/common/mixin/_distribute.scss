@@ -1,17 +1,25 @@
 // _distribute.scss
 
 @mixin ga-distribute($distribute) {
-	@if $distribute == start {
-		align-content: flex-start;
-	} @else if $distribute == center {
-		align-content: center;
-	} @else if $distribute == end {
-		align-content: flex-end;
-	} @else if $distribute == stretch {
-		align-content: stretch;
-	} @else if $distribute == around {
-		align-content: space-around;
-	} @else if $distribute == between {
-		align-content: space-between;
+
+	// valid distribute options
+	$distribute-options: (
+		start: flex-start,
+		center: center,
+		end: flex-end,
+		stretch: stretch,
+		around: space-around,
+		between: space-between
+	);
+
+	// get value
+	$distribute-value: map-get($distribute-options, $distribute);
+
+	// validate distribute
+	@if not $distribute-value {
+		@error "Invalid distribute option '#{$distribute}'.";
 	}
+
+	// set declaration
+	align-content: $distribute-value;
 }
