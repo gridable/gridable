@@ -1,8 +1,6 @@
 // gridable.amcss.scss
 
-@import '../common/variables';
-@import '../common/functions';
-@import '../common/mixins';
+@import '../gridable';
 @import 'amcss/grid';
 @import 'amcss/width';
 @import 'amcss/gutter';

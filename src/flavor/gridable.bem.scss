@@ -1,8 +1,6 @@
 // gridable.bem.scss
 
-@import '../common/variables';
-@import '../common/functions';
-@import '../common/mixins';
+@import '../gridable';
 @import 'bem/grid';
 @import 'bem/width';
 @import 'bem/gutter';
