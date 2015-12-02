@@ -15,19 +15,19 @@
 
 @each $name, $selector in $ga-breakpoints {
 	@include ga-breakpoint($name) {
-		.#{$ga-prefix}-hide-\.#{$name} {
+		.#{$ga-prefix}-hide\.#{$name} {
 			@include ga-hide;
 		}
 	}
 
 	@include ga-breakpoint($name, up) {
-		.#{$ga-prefix}-hide-\.#{$name}\+ {
+		.#{$ga-prefix}-hide\.#{$name}\+ {
 			@include ga-hide;
 		}
 	}
 
 	@include ga-breakpoint($name, down) {
-		.#{$ga-prefix}-hide-\.#{$name}- {
+		.#{$ga-prefix}-hide\.#{$name}- {
 			@include ga-hide;
 		}
 	}
