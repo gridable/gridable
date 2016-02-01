@@ -12,5 +12,5 @@ gulp.task('watch:tasks', function() {
 	gulp.watch(path.setup.bower, ['setup:bower']);
 
 	// Styles
-	gulp.watch(path.source.style + '**', ['styles:common']);
+	gulp.watch(path.source.style + '**/*.scss', ['styles:common']);
 });

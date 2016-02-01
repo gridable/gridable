@@ -12,7 +12,7 @@ gulp.task('styles', ['styles:common']);
 gulp.task('styles:common', function() {
 	var name = 'Styles';
 
-	return gulp.src(path.source.style + '*.scss')
+	return gulp.src(path.source.style + 'flavor/**/*.scss')
 		.pipe($.plumber(helper.error))
 		.pipe($.sass())
 		.pipe($.autoprefixer())

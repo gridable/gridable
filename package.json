@@ -18,13 +18,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/thasmo/gridable"
+    "url": "http://github.com/gridable/gridable"
   },
   "devDependencies": {
     "gulp": "~3.9",
     "gulp-util": "~3.0",
     "gulp-plumber": "~1.0",
-    "gulp-load-plugins": "~1.1",
+    "gulp-load-plugins": "~1.2",
     "gulp-sass": "~2.1",
     "gulp-notify": "~2.2",
     "gulp-autoprefixer": "~3.1",

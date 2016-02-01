@@ -1,5 +1,21 @@
 // _wrap.scss
 
-@mixin ga-wrap($wrap) {
-	flex-wrap: if($wrap == 'on', wrap, nowrap);
+@mixin ga-wrap($wrap: on) {
+
+	// valid wrap options
+	$wrap-options: (
+		on: wrap,
+		off: nowrap
+	);
+
+	// get value
+	$wrap-value: map-get($wrap-options, $wrap);
+
+	// validate wrap
+	@if not $wrap-value {
+		@error "Invalid wrap option '#{$wrap}'.";
+	}
+
+	// set declaration
+	flex-wrap: $wrap-value;
 }

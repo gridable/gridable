@@ -1,11 +1,25 @@
 // _position.scss
 
 @mixin ga-position($position, $columns: $ga-columns) {
-	@if $position == start {
-		order: -1;
-	} @else if $position == end {
-		order: $columns + 1;
+
+	// valid position options
+	$position-options: (
+		start: -1,
+		end: $columns + 1
+	);
+
+	// get value
+	@if type-of($position) == 'string' {
+		$position-value: map-get($position-options, $position);
 	} @else {
-		order: #{$position};
+		$position-value: $position;
 	}
+
+	// validate position
+	@if not $position-value or type-of($position-value) != 'number' {
+		@error "Invalid position option '#{$position}'.";
+	}
+
+	// set declaration
+	order: $position-value;
 }

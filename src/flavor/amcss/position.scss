@@ -1,5 +1,7 @@
 // _position.scss
 
+@import '../../gridable';
+
 [#{$ga-prefix}-grid] {
 	> [#{$ga-prefix}-cell~="position:start"] {
 		@include ga-position(start);

@@ -1,5 +1,7 @@
 // _utility.scss
 
+@import '../../gridable';
+
 // Visibility
 @media (orientation: portrait) {
 	[#{$ga-prefix}-hide~="portrait"] {

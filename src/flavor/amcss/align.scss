@@ -1,5 +1,7 @@
 // _align.scss
 
+@import '../../gridable';
+
 [#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="align:start"] {
 	@include ga-align(start);
 }

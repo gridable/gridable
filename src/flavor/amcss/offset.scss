@@ -1,5 +1,7 @@
 // _offset.scss
 
+@import '../../gridable';
+
 [#{$ga-prefix}-grid~="offset:0"] > *,
 [#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="offset:0"] {
 	@include ga-offset(0);

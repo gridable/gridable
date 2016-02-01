@@ -1,13 +1,33 @@
 // _orientate.scss
 
 @mixin ga-orientate($direction, $order: normal) {
-	@if $direction == horizontal and $order == normal {
-		flex-direction: row;
-	} @else if $direction == horizontal and $order == reverse {
-		flex-direction: row-reverse;
-	} @else if $direction == vertical and $order == normal {
-		flex-direction: column;
-	} @else if $direction == vertical and $order == reverse {
-		flex-direction: column-reverse;
+
+	// valid direction options
+	$direction-options: (
+		horizontal: row,
+		vertical: column
+	);
+
+	// valid order options
+	$order-options: (
+		normal: '',
+		reverse: -reverse
+	);
+
+	// get values
+	$direction-value: map-get($direction-options, $direction);
+	$order-value: map-get($order-options, $order);
+
+	// validate direction
+	@if not $direction-value {
+		@error "Invalid direction option '#{$direction}'.";
 	}
+
+	// validate order
+	@if not $order-value {
+		@error "Invalid order option '#{$order}'.";
+	}
+
+	// set declaration
+	flex-direction: $direction-value + $order-value;
 }

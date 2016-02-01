@@ -1,5 +1,7 @@
 // _wrap.scss
 
+@import '../../gridable';
+
 [#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="wrap:on"] {
 	@include ga-wrap(on);
 }

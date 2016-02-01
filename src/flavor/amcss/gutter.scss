@@ -1,5 +1,7 @@
 // _gutter.scss
 
+@import '../../gridable';
+
 @each $key, $gutter in $ga-gutters {
 	@if $key == $ga-gutter {
 		[#{$ga-prefix}-grid] {

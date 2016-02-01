@@ -3,6 +3,10 @@
 @mixin ga-gutter($name, $gutters: $ga-gutters) {
 	$gutter: map-get($gutters, $name);
 
+	@if not $gutter {
+		@error "Invalid gutter gutter '#{$name}'.";
+	}
+
 	margin: 0 (- $gutter);
 
 	> * {
