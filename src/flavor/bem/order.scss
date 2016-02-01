@@ -1,0 +1,24 @@
+// _order.scss
+
+@import '../../gridable';
+
+.#{$ga-prefix}-grid, .#{$ga-prefix}-grid--order\:normal {
+	@include ga-orientate(horizontal);
+}
+
+.#{$ga-prefix}-grid--order\:reverse {
+	@include ga-orientate(horizontal, reverse);
+}
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+
+		.#{$ga-prefix}-grid--order\.#{$name}\:normal {
+			@include ga-orientate(horizontal);
+		}
+
+		.#{$ga-prefix}-grid--order\.#{$name}\:reverse {
+			@include ga-orientate(horizontal, reverse);
+		}
+	}
+}

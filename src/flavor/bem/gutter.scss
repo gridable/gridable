@@ -1,0 +1,25 @@
+// _gutter.scss
+
+@import '../../gridable';
+
+@each $key, $gutter in $ga-gutters {
+	@if $key == $ga-gutter {
+		.#{$ga-prefix}-grid {
+			@include ga-gutter($key);
+		}
+	}
+
+	.#{$ga-prefix}-grid--gutter\:#{$key} {
+		@include ga-gutter($key);
+	}
+}
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		@each $key, $gutter in $ga-gutters {
+			.#{$ga-prefix}-grid--gutter\.#{$name}\:#{$key} {
+				@include ga-gutter($key);
+			}
+		}
+	}
+}

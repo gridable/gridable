@@ -1,0 +1,92 @@
+// _align.scss
+
+@import '../../gridable';
+
+.#{$ga-prefix}-grid, .#{$ga-prefix}-grid--align\:start {
+	@include ga-align(start);
+}
+
+.#{$ga-prefix}-grid--align\:center {
+	@include ga-align(center);
+}
+
+.#{$ga-prefix}-grid--align\:end {
+	@include ga-align(end);
+}
+
+.#{$ga-prefix}-grid--align\:baseline {
+	@include ga-align(baseline);
+}
+
+.#{$ga-prefix}-grid--align\:stretch {
+	@include ga-align(stretch);
+}
+
+.#{$ga-prefix}-grid {
+	&__cell--align\:start {
+		@include ga-align(start, cell);
+	}
+
+	&__cell--align\:center {
+		@include ga-align(center, cell);
+	}
+
+	&__cell--align\:end {
+		@include ga-align(end, cell);
+	}
+
+	&__cell--align\:baseline {
+		@include ga-align(baseline, cell);
+	}
+
+	&__cell--align\:stretch {
+		@include ga-align(stretch, cell);
+	}
+}
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:start {
+			@include ga-align(start);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:center {
+			@include ga-align(center);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:end {
+			@include ga-align(end);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:baseline {
+			@include ga-align(baseline);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:stretch {
+			@include ga-align(stretch);
+		}
+
+		.#{$ga-prefix}-grid {
+			&__cell--align\.#{$name}\:start {
+				@include ga-align(start, cell);
+			}
+
+			&__cell--align\.#{$name}\:center {
+				@include ga-align(center, cell);
+			}
+
+			&__cell--align\.#{$name}\:end {
+				@include ga-align(end, cell);
+			}
+
+			&__cell--align\.#{$name}\:baseline {
+				@include ga-align(baseline, cell);
+			}
+
+			&__cell--align\.#{$name}\:stretch {
+				@include ga-align(stretch, cell);
+			}
+		}
+	}
+}
