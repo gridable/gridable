@@ -6,6 +6,8 @@
 - Add BEM flavor.
 - Add AMCSS flavor.
 - Better error handling in mixins.
+- Add missing CSS properties to support IE 10.
+- Separate CSS files for CDN usage.
 
 ## [0.2.0][0.2.0] - 2015-11-08
 
