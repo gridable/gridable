@@ -1,8 +1,14 @@
 # Change Log
 
-## [Next][next]
+## [next]
 
-## [0.3.0][0.3.0] - 2016-02-01
+### Added
+- Add minified distribution files.
+
+### Changed
+- Rename BEM and AMCSS base files.
+
+## [0.3.0] - 2016-02-01
 
 ### Added
 - Add BEM flavor.
@@ -11,7 +17,7 @@
 - Add missing CSS properties to support IE 10.
 - Separate CSS files for CDN usage.
 
-## [0.2.0][0.2.0] - 2015-11-08
+## [0.2.0] - 2015-11-08
 
 ### Added
 - Make the attribute-name prefix configurable.
@@ -25,7 +31,7 @@
 - Rename mixins, functions and variables using a shorter prefix.
 - Restructure/move logic into separate files.
 
-## [0.1.0][0.1.0] - 2015-07-30
+## [0.1.0] - 2015-07-30
 
 ### Added
 - Initial release.
