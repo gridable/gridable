@@ -1,6 +1,6 @@
 // _justify.scss
 
-@import '../../gridable';
+@import '../../common';
 
 [#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="justify:start"] {
 	@include ga-justify(start);

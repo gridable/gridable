@@ -1,6 +1,6 @@
 // _width.scss
 
-@import '../../gridable';
+@import '../../common';
 
 @for $width from 1 through $ga-columns {
 	[#{$ga-prefix}-grid~="width:#{$width}"] > *,

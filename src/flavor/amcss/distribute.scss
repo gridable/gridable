@@ -1,6 +1,6 @@
 // _distribute.scss
 
-@import '../../gridable';
+@import '../../common';
 
 [#{$ga-prefix}-grid~="distribute:start"] {
 	@include ga-distribute(start);

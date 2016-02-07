@@ -1,6 +1,6 @@
 // _grid.scss
 
-@import '../../gridable';
+@import '../../common';
 
 .#{$ga-prefix}-grid {
 	@include ga-grid;

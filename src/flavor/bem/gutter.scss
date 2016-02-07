@@ -1,6 +1,6 @@
 // _gutter.scss
 
-@import '../../gridable';
+@import '../../common';
 
 @each $key, $gutter in $ga-gutters {
 	@if $key == $ga-gutter {
