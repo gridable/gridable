@@ -17,6 +17,9 @@ gulp.task('styles:common', function() {
 		.pipe($.sass())
 		.pipe($.autoprefixer())
 		.pipe(gulp.dest(path.distribution.style))
+		.pipe($.cssnano())
+		.pipe($.rename({extname: '.min.css'}))
+		.pipe(gulp.dest(path.distribution.style))
 		.pipe($.duration(name))
 		.pipe(helper.success(name));
 });

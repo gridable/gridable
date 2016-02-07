@@ -1,6 +1,6 @@
 // _direct.scss
 
-@import '../../gridable';
+@import '../../common';
 
 [#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="direct:horizontal"] {
 	@include ga-orientate(horizontal);

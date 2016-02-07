@@ -1,6 +1,6 @@
 // _order.scss
 
-@import '../../gridable';
+@import '../../common';
 
 .#{$ga-prefix}-grid, .#{$ga-prefix}-grid--order\:normal {
 	@include ga-orientate(horizontal);

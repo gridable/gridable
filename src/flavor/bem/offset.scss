@@ -1,6 +1,6 @@
 // _offset.scss
 
-@import '../../gridable';
+@import '../../common';
 
 .#{$ga-prefix}-grid--offset\:0 > *,
 .#{$ga-prefix}-grid__cell--offset\:0 {
