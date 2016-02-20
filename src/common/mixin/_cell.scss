@@ -2,6 +2,7 @@
 
 @mixin ga-cell($width: null, $offset: null, $position: null, $align: null) {
 	box-sizing: border-box;
+	width: 0;
 	max-width: 100%;
 	flex: 1 0 0%;
 

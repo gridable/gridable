@@ -5,6 +5,7 @@
   display: flex; }
   [ga-grid] > * {
     box-sizing: border-box;
+    width: 0;
     max-width: 100%;
     -webkit-flex: 1 0 0%;
         -ms-flex: 1 0 0%;
