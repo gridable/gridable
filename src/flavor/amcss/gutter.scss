@@ -2,13 +2,11 @@
 
 @import '../../common';
 
-@each $key, $gutter in $ga-gutters {
-	@if $key == $ga-gutter {
-		[#{$ga-prefix}-grid] {
-			@include ga-gutter($key);
-		}
-	}
+[#{$ga-prefix}-grid] {
+	@include ga-gutter($ga-gutter);
+}
 
+@each $key, $gutter in $ga-gutters {
 	[#{$ga-prefix}-grid~="gutter:#{$key}"] {
 		@include ga-gutter($key);
 	}
