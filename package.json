@@ -3,12 +3,11 @@
   "description": "Responsive layout-grid using flexible-box.",
   "homepage": "http://gridable.ga/",
   "license": "MIT",
-  "author": [
-    {
-      "name": "Thomas Deinhamer",
-      "email": "thasmo@gmail.com"
-    }
-  ],
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "thasmo@gmail.com",
+    "url": "https://thasmo.com/"
+  },
   "keywords": [
     "grid",
     "flexbox",
