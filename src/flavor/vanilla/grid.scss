@@ -1,0 +1,7 @@
+// _grid.scss
+
+@import '../../common';
+
+.#{$ga-prefix}-grid {
+	@include ga-grid;
+}
