@@ -1,6 +1,5 @@
 # gridable
-
-Responsive layout-grid using flexible-box.
+> Responsive layout-grid using flexible-box.
 
 ## Features
 * Powered by Sass (SCSS).
