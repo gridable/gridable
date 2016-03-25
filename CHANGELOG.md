@@ -5,6 +5,7 @@
 ### Added
 - Add vanilla flavor.
 - Add more offset options.
+- Introduce a simple and a full/responsive version.
 
 ### Fixed
 - Fix specificity issue with gutter styles.
