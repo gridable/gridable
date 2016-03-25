@@ -2,6 +2,14 @@
 
 ## [next]
 
+### Added
+- Add vanilla flavor.
+- Add more offset options.
+
+### Fixed
+- Fix specificity issue with gutter styles.
+- Add a zero-width to grid-cells to properly scale the width of cells.
+
 ## [0.4.0] - 2016-02-08
 
 ### Added
