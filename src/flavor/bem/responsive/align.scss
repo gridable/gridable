@@ -1,0 +1,49 @@
+// responsive/_align.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid--align\.#{$name}\:start {
+			@include ga-align(start);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:center {
+			@include ga-align(center);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:end {
+			@include ga-align(end);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:baseline {
+			@include ga-align(baseline);
+		}
+
+		.#{$ga-prefix}-grid--align\.#{$name}\:stretch {
+			@include ga-align(stretch);
+		}
+
+		.#{$ga-prefix}-grid {
+			&__cell--align\.#{$name}\:start {
+				@include ga-align(start, cell);
+			}
+
+			&__cell--align\.#{$name}\:center {
+				@include ga-align(center, cell);
+			}
+
+			&__cell--align\.#{$name}\:end {
+				@include ga-align(end, cell);
+			}
+
+			&__cell--align\.#{$name}\:baseline {
+				@include ga-align(baseline, cell);
+			}
+
+			&__cell--align\.#{$name}\:stretch {
+				@include ga-align(stretch, cell);
+			}
+		}
+	}
+}

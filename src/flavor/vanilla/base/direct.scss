@@ -1,0 +1,19 @@
+// _direct.scss
+
+@import '../../../common';
+
+.#{$ga-prefix}-grid, .#{$ga-prefix}-grid.direct\:horizontal {
+	@include ga-orientate(horizontal);
+
+	&.#{$ga-prefix}-grid.order\:reverse {
+		@include ga-orientate(horizontal, reverse);
+	}
+}
+
+.#{$ga-prefix}-grid.direct\:vertical {
+	@include ga-orientate(vertical);
+
+	&.#{$ga-prefix}-grid.order\:reverse {
+		@include ga-orientate(vertical, reverse);
+	}
+}

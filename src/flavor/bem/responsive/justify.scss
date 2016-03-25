@@ -1,0 +1,27 @@
+// _justify.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid--justify\.#{$name}\:start {
+			@include ga-justify(start);
+		}
+
+		.#{$ga-prefix}-grid--justify\.#{$name}\:center {
+			@include ga-justify(center);
+		}
+
+		.#{$ga-prefix}-grid--justify\.#{$name}\:end {
+			@include ga-justify(end);
+		}
+
+		.#{$ga-prefix}-grid--justify\.#{$name}\:between {
+			@include ga-justify(between);
+		}
+
+		.#{$ga-prefix}-grid--justify\.#{$name}\:around {
+			@include ga-justify(around);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+// _position.scss
+
+@import '../../../common';
+
+.#{$ga-prefix}-cell {
+	&.position\:start {
+		@include ga-position(start);
+	}
+
+	&.position\:end {
+		@include ga-position(end);
+	}
+
+	@for $position from 1 through $ga-columns {
+		&.position\:#{$position} {
+			@include ga-position($position);
+		}
+	}
+}

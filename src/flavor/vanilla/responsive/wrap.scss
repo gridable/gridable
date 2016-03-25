@@ -1,0 +1,15 @@
+// _wrap.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid.wrap\.#{$name}\:on {
+			@include ga-wrap(on);
+		}
+
+		.#{$ga-prefix}-grid.wrap\.#{$name}\:off {
+			@include ga-wrap(off);
+		}
+	}
+}

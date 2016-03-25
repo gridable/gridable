@@ -1,0 +1,13 @@
+// _gutter.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		@each $key, $gutter in $ga-gutters {
+			.#{$ga-prefix}-grid--gutter\.#{$name}\:#{$key} {
+				@include ga-gutter($key);
+			}
+		}
+	}
+}

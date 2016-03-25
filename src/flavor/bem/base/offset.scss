@@ -1,0 +1,35 @@
+// _offset.scss
+
+@import '../../../common';
+
+.#{$ga-prefix}-grid--offset\:center > *,
+.#{$ga-prefix}-grid__cell--offset\:center {
+	@include ga-offset('center');
+}
+
+.#{$ga-prefix}-grid--offset\:start > *,
+.#{$ga-prefix}-grid__cell--offset\:start {
+	@include ga-offset('start');
+}
+
+.#{$ga-prefix}-grid--offset\:end > *,
+.#{$ga-prefix}-grid__cell--offset\:end {
+	@include ga-offset('end');
+}
+
+.#{$ga-prefix}-grid--offset\:0 > *,
+.#{$ga-prefix}-grid__cell--offset\:0 {
+	@include ga-offset(0);
+}
+
+@for $offset from 1 through $ga-columns {
+	.#{$ga-prefix}-grid--offset\:#{$offset} > *,
+	.#{$ga-prefix}-grid__cell--offset\:#{$offset} {
+		@include ga-offset($offset);
+	}
+
+	.#{$ga-prefix}-grid--offset\:\.#{$offset} > *,
+	.#{$ga-prefix}-grid__cell--offset\:\.#{$offset} {
+		@include ga-offset(-$offset);
+	}
+}
