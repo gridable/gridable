@@ -4,7 +4,7 @@
 ## Features
 * Powered by Sass (SCSS).
 * Flexible-box powered arrangement of columns.
-* Pre-compiled and ready-to-use styles in BEM and AMCSS flavor.
+* Pre-compiled and ready-to-use styles in BEM, AMCSS and vanilla flavor.
 * Configurable number of columns.
 * Configurable breakpoints via custom media-queries.
 * Multiple configurable gutter widths.
