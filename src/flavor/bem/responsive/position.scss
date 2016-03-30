@@ -1,0 +1,23 @@
+// _position.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid {
+			&__cell--position\.#{$name}\:start {
+				@include ga-position(start);
+			}
+
+			&__cell--position\.#{$name}\:end {
+				@include ga-position(end);
+			}
+
+			@for $position from 1 through $ga-columns {
+				&__cell--position\.#{$name}\:#{$position} {
+					@include ga-position($position);
+				}
+			}
+		}
+	}
+}

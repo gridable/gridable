@@ -1,0 +1,15 @@
+// _order.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid.order\.#{$name}\:normal {
+			@include ga-orientate(horizontal);
+		}
+
+		.#{$ga-prefix}-grid.order\.#{$name}\:reverse {
+			@include ga-orientate(horizontal, reverse);
+		}
+	}
+}

@@ -1,10 +1,38 @@
 // _offset.scss
 
 @mixin ga-offset($offset, $columns: $ga-columns) {
-	@if $offset < 0 {
-		margin-right: percentage(abs($offset) / $columns);
-	} @else if $offset > 0 {
-		margin-left: percentage(abs($offset) / $columns);
+
+	// valid position options
+	$offset-options: (
+		'start': 'start',
+		'end': 'end',
+		'center': 'center'
+	);
+
+	// get value
+	@if type-of($offset) == 'string' {
+		$offset-value: map-get($offset-options, $offset);
+	} @else {
+		$offset-value: $offset;
+	}
+
+	// validate position
+	@if not $offset-value {
+		@error "Invalid position option '#{$offset}'.";
+	}
+
+	// set declaration
+	@if $offset-value == 'center' {
+		margin-left: auto;
+		margin-right: auto;
+	} @else if $offset-value == 'start' {
+		margin-right: auto;
+	} @else if $offset-value == 'end' {
+		margin-left: auto;
+	} @elseif $offset-value < 0 {
+		margin-right: percentage(abs($offset-value) / $columns);
+	} @else if $offset-value > 0 {
+		margin-left: percentage(abs($offset-value) / $columns);
 	} @else {
 		margin-left: 0;
 	}

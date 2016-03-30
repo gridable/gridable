@@ -1,0 +1,11 @@
+// _order.scss
+
+@import '../../../common';
+
+[#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="order:normal"] {
+	@include ga-orientate(horizontal);
+}
+
+[#{$ga-prefix}-grid~="order:reverse"] {
+	@include ga-orientate(horizontal, reverse);
+}

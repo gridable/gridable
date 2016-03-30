@@ -1,0 +1,49 @@
+// _align.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid.align\.#{$name}\:start {
+			@include ga-align(start);
+		}
+
+		.#{$ga-prefix}-grid.align\.#{$name}\:center {
+			@include ga-align(center);
+		}
+
+		.#{$ga-prefix}-grid.align\.#{$name}\:end {
+			@include ga-align(end);
+		}
+
+		.#{$ga-prefix}-grid.align\.#{$name}\:baseline {
+			@include ga-align(baseline);
+		}
+
+		.#{$ga-prefix}-grid.align\.#{$name}\:stretch {
+			@include ga-align(stretch);
+		}
+
+		.#{$ga-prefix}-cell {
+			&.align\.#{$name}\:start {
+				@include ga-align(start, cell);
+			}
+
+			&.align\.#{$name}\:center {
+				@include ga-align(center, cell);
+			}
+
+			&.align\.#{$name}\:end {
+				@include ga-align(end, cell);
+			}
+
+			&.align\.#{$name}\:baseline {
+				@include ga-align(baseline, cell);
+			}
+
+			&.align\.#{$name}\:stretch {
+				@include ga-align(stretch, cell);
+			}
+		}
+	}
+}

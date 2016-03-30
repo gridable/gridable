@@ -1,0 +1,13 @@
+// _gutter.scss
+
+@import '../../../common';
+
+.#{$ga-prefix}-grid {
+	@include ga-gutter($ga-gutter);
+}
+
+@each $key, $gutter in $ga-gutters {
+	.#{$ga-prefix}-grid--gutter\:#{$key} {
+		@include ga-gutter($key);
+	}
+}

@@ -1,0 +1,16 @@
+// _utility.scss
+
+@import '../../../common';
+
+// Visibility
+@media (orientation: portrait) {
+	.#{$ga-prefix}-hide-portrait {
+		@include ga-hide;
+	}
+}
+
+@media (orientation: landscape) {
+	.#{$ga-prefix}-hide-landscape {
+		@include ga-hide;
+	}
+}

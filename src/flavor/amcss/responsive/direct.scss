@@ -1,0 +1,25 @@
+// _direct.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		[#{$ga-prefix}-grid~="direct.#{$name}:horizontal"] {
+			@include ga-orientate(horizontal);
+
+			&[#{$ga-prefix}-grid~="order:reverse"],
+			&[#{$ga-prefix}-grid~="order.#{$name}:reverse"] {
+				@include ga-orientate(horizontal, reverse);
+			}
+		}
+
+		[#{$ga-prefix}-grid~="direct.#{$name}:vertical"] {
+			@include ga-orientate(vertical);
+
+			&[#{$ga-prefix}-grid~="order:reverse"],
+			&[#{$ga-prefix}-grid~="order.#{$name}:reverse"] {
+				@include ga-orientate(vertical, reverse);
+			}
+		}
+	}
+}

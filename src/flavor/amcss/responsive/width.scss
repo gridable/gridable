@@ -1,0 +1,14 @@
+// _width.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		@for $width from 1 through $ga-columns {
+			[#{$ga-prefix}-grid~="width.#{$name}:#{$width}"] > *,
+			[#{$ga-prefix}-grid] > [#{$ga-prefix}-cell~="width.#{$name}:#{$width}"] {
+				@include ga-width($width);
+			}
+		}
+	}
+}

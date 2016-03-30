@@ -1,0 +1,27 @@
+// _distribute.scss
+
+@import '../../../common';
+
+[#{$ga-prefix}-grid~="distribute:start"] {
+	@include ga-distribute(start);
+}
+
+[#{$ga-prefix}-grid~="distribute:center"] {
+	@include ga-distribute(center);
+}
+
+[#{$ga-prefix}-grid~="distribute:end"] {
+	@include ga-distribute(end);
+}
+
+[#{$ga-prefix}-grid], [#{$ga-prefix}-grid~="distribute:stretch"] {
+	@include ga-distribute(stretch);
+}
+
+[#{$ga-prefix}-grid~="distribute:between"] {
+	@include ga-distribute(between);
+}
+
+[#{$ga-prefix}-grid~="distribute:around"] {
+	@include ga-distribute(around);
+}

@@ -1,0 +1,39 @@
+// _offset.scss
+
+@import '../../../common';
+
+@each $name, $selector in $ga-breakpoints {
+	@include ga-breakpoint($name, up) {
+		.#{$ga-prefix}-grid.offset\.#{$name}\:center > *,
+		.#{$ga-prefix}-cell.offset\.#{$name}\:center {
+			@include ga-offset('center');
+		}
+
+		.#{$ga-prefix}-grid.offset\.#{$name}\:start > *,
+		.#{$ga-prefix}-cell.offset\.#{$name}\:start {
+			@include ga-offset('start');
+		}
+
+		.#{$ga-prefix}-grid.offset\.#{$name}\:end > *,
+		.#{$ga-prefix}-cell.offset\.#{$name}\:end {
+			@include ga-offset('end');
+		}
+
+		.#{$ga-prefix}-grid.offset\.#{$name}\:0 > *,
+		.#{$ga-prefix}-cell.offset\.#{$name}\:0 {
+			@include ga-offset(0);
+		}
+
+		@for $offset from 1 through $ga-columns {
+			.#{$ga-prefix}-grid.offset\.#{$name}\:#{$offset} > *,
+			.#{$ga-prefix}-cell.offset\.#{$name}\:#{$offset} {
+				@include ga-offset($offset);
+			}
+
+			.#{$ga-prefix}-grid.offset\.#{$name}\:\.#{$offset} > *,
+			.#{$ga-prefix}-cell.offset\.#{$name}\:\.#{$offset} {
+				@include ga-offset(-$offset);
+			}
+		}
+	}
+}

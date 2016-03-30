@@ -1,0 +1,10 @@
+// _width.scss
+
+@import '../../../common';
+
+@for $width from 1 through $ga-columns {
+	.#{$ga-prefix}-grid--width\:#{$width} > *,
+	.#{$ga-prefix}-grid__cell--width\:#{$width} {
+		@include ga-width($width);
+	}
+}

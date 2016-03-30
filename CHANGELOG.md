@@ -2,6 +2,17 @@
 
 ## [next]
 
+## [0.5.0] - 2016-03-30
+
+### Added
+- Add vanilla flavor.
+- Add more offset options.
+- Introduce a simple and a full/responsive version.
+
+### Fixed
+- Fix specificity issue with gutter styles.
+- Add a zero-width to grid-cells to properly scale the width of cells.
+
 ## [0.4.0] - 2016-02-08
 
 ### Added
@@ -38,7 +49,8 @@
 ### Added
 - Initial release.
 
-[next]: https://github.com/gridable/gridable/compare/v0.4.0...HEAD
+[next]: https://github.com/gridable/gridable/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/gridable/gridable/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/gridable/gridable/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/gridable/gridable/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/gridable/gridable/compare/v0.1.0...v0.2.0
