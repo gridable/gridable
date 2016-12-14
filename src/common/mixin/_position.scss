@@ -2,6 +2,9 @@
 
 @mixin ga-position($position, $columns: $ga-columns) {
 
+	// initial value
+	$position-value: null;
+
 	// valid position options
 	$position-options: (
 		start: -1,

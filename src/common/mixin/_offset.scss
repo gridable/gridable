@@ -2,6 +2,9 @@
 
 @mixin ga-offset($offset, $columns: $ga-columns) {
 
+	// initial value
+	$offset-value: null;
+
 	// valid position options
 	$offset-options: (
 		'start': 'start',
