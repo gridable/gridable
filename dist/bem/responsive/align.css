@@ -2,27 +2,22 @@
   .ga-grid--align\.tiny\:start {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start; }
   .ga-grid--align\.tiny\:center {
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center; }
   .ga-grid--align\.tiny\:end {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end; }
   .ga-grid--align\.tiny\:baseline {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
-                -ms-grid-row-align: baseline;
             align-items: baseline; }
   .ga-grid--align\.tiny\:stretch {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
             align-items: stretch; }
   .ga-grid__cell--align\.tiny\:start {
     -webkit-align-self: flex-start;
@@ -31,6 +26,7 @@
   .ga-grid__cell--align\.tiny\:center {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center; }
   .ga-grid__cell--align\.tiny\:end {
     -webkit-align-self: flex-end;
@@ -43,33 +39,29 @@
   .ga-grid__cell--align\.tiny\:stretch {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
             align-self: stretch; } }
 
 @media (min-width: 50rem) {
   .ga-grid--align\.small\:start {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start; }
   .ga-grid--align\.small\:center {
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center; }
   .ga-grid--align\.small\:end {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end; }
   .ga-grid--align\.small\:baseline {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
-                -ms-grid-row-align: baseline;
             align-items: baseline; }
   .ga-grid--align\.small\:stretch {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
             align-items: stretch; }
   .ga-grid__cell--align\.small\:start {
     -webkit-align-self: flex-start;
@@ -78,6 +70,7 @@
   .ga-grid__cell--align\.small\:center {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center; }
   .ga-grid__cell--align\.small\:end {
     -webkit-align-self: flex-end;
@@ -90,33 +83,29 @@
   .ga-grid__cell--align\.small\:stretch {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
             align-self: stretch; } }
 
 @media (min-width: 75rem) {
   .ga-grid--align\.medium\:start {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start; }
   .ga-grid--align\.medium\:center {
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center; }
   .ga-grid--align\.medium\:end {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end; }
   .ga-grid--align\.medium\:baseline {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
-                -ms-grid-row-align: baseline;
             align-items: baseline; }
   .ga-grid--align\.medium\:stretch {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
             align-items: stretch; }
   .ga-grid__cell--align\.medium\:start {
     -webkit-align-self: flex-start;
@@ -125,6 +114,7 @@
   .ga-grid__cell--align\.medium\:center {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center; }
   .ga-grid__cell--align\.medium\:end {
     -webkit-align-self: flex-end;
@@ -137,33 +127,29 @@
   .ga-grid__cell--align\.medium\:stretch {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
             align-self: stretch; } }
 
 @media (min-width: 100rem) {
   .ga-grid--align\.large\:start {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start; }
   .ga-grid--align\.large\:center {
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center; }
   .ga-grid--align\.large\:end {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end; }
   .ga-grid--align\.large\:baseline {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
-                -ms-grid-row-align: baseline;
             align-items: baseline; }
   .ga-grid--align\.large\:stretch {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
             align-items: stretch; }
   .ga-grid__cell--align\.large\:start {
     -webkit-align-self: flex-start;
@@ -172,6 +158,7 @@
   .ga-grid__cell--align\.large\:center {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center; }
   .ga-grid__cell--align\.large\:end {
     -webkit-align-self: flex-end;
@@ -184,33 +171,29 @@
   .ga-grid__cell--align\.large\:stretch {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
             align-self: stretch; } }
 
 @media (min-width: 125rem) {
   .ga-grid--align\.huge\:start {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start; }
   .ga-grid--align\.huge\:center {
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center; }
   .ga-grid--align\.huge\:end {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end; }
   .ga-grid--align\.huge\:baseline {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
-                -ms-grid-row-align: baseline;
             align-items: baseline; }
   .ga-grid--align\.huge\:stretch {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
             align-items: stretch; }
   .ga-grid__cell--align\.huge\:start {
     -webkit-align-self: flex-start;
@@ -219,6 +202,7 @@
   .ga-grid__cell--align\.huge\:center {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center; }
   .ga-grid__cell--align\.huge\:end {
     -webkit-align-self: flex-end;
@@ -231,4 +215,5 @@
   .ga-grid__cell--align\.huge\:stretch {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
             align-self: stretch; } }
